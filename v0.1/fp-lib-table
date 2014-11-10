@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name RobotsArena)(type KiCad)(uri /home/saladin/Documents/SPJ-RobotsArena/schematics_and_pcbs/library/spj-robots-arena.pretty)(options "")(descr ""))
+)

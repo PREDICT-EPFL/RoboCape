@@ -1,0 +1,225 @@
+EESchema Schematic File Version 2
+LIBS:spj-robots-arena
+LIBS:robots-arena-v0-1-cache
+EELAYER 24 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title "Robots Arena BBB Cape"
+Date "29 Sep 2014"
+Rev "A1"
+Comp "Swiss Institure of Technology Lausanne (EPFL)"
+Comment1 ""
+Comment2 ""
+Comment3 "Under supervision of: Andrea Alessandretti"
+Comment4 "Designed by: Salah-Eddine Missri"
+$EndDescr
+Text Notes 6200 2950 2    80   ~ 16
+GPS rescue pins
+Text Notes 4900 2950 2    80   ~ 16
+9-DOF IMU rescue pins
+Text Notes 8450 2950 2    80   ~ 16
+Pressure sensor rescue pins
+Text GLabel 5650 3850 0    40   Input ~ 8
+UART_1_RX
+Text GLabel 5650 3650 0    40   Input ~ 8
+UART_1_TX
+$Comp
+L DGND #PWR075
+U 1 1 542BCC1A
+P 5750 3500
+F 0 "#PWR075" H 5750 3500 40  0001 C CNN
+F 1 "DGND" H 5750 3430 40  0000 C CNN
+F 2 "" H 5750 3500 40  0000 C CNN
+F 3 "" H 5750 3500 40  0000 C CNN
+	1    5750 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 3500 5750 3450
+$Comp
+L 3V3 #PWR076
+U 1 1 542BCC3A
+P 5750 3200
+F 0 "#PWR076" H 5750 3300 40  0001 C CNN
+F 1 "3V3" H 5750 3325 40  0000 C CNN
+F 2 "" H 5750 3200 40  0000 C CNN
+F 3 "" H 5750 3200 40  0000 C CNN
+	1    5750 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 3250 5950 3250
+Wire Wire Line
+	5650 3650 5950 3650
+Wire Wire Line
+	5950 3850 5650 3850
+Text Label 5950 3850 2    40   ~ 8
+TX
+Text Label 5950 3650 2    40   ~ 8
+RX
+Text Label 5950 3450 2    40   ~ 8
+GND
+Text Label 5950 3250 2    40   ~ 8
+VIN
+$Comp
+L CONN_01X04 P11
+U 1 1 542BD380
+P 6150 3550
+F 0 "P11" H 6150 4000 50  0000 C CNN
+F 1 "CONN_01X04" V 6300 3550 50  0000 C CNN
+F 2 "" H 6150 3550 60  0000 C CNN
+F 3 "" H 6150 3550 60  0000 C CNN
+	1    6150 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X05 P12
+U 1 1 542BD3B7
+P 4450 3550
+F 0 "P12" H 4450 4000 50  0000 C CNN
+F 1 "CONN_01X05" V 4600 3450 50  0000 C CNN
+F 2 "" H 4450 3550 60  0000 C CNN
+F 3 "" H 4450 3550 60  0000 C CNN
+	1    4450 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 3450 5950 3450
+Wire Wire Line
+	5750 3250 5750 3200
+$Comp
+L DGND #PWR077
+U 1 1 542BDD68
+P 4050 3500
+F 0 "#PWR077" H 4050 3500 40  0001 C CNN
+F 1 "DGND" H 4050 3430 40  0000 C CNN
+F 2 "" H 4050 3500 40  0000 C CNN
+F 3 "" H 4050 3500 40  0000 C CNN
+	1    4050 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 3500 4050 3450
+Wire Wire Line
+	4050 3450 4250 3450
+$Comp
+L 3V3 #PWR078
+U 1 1 542BDD9E
+P 3850 3600
+F 0 "#PWR078" H 3850 3700 40  0001 C CNN
+F 1 "3V3" H 3850 3725 40  0000 C CNN
+F 2 "" H 3850 3600 40  0000 C CNN
+F 3 "" H 3850 3600 40  0000 C CNN
+	1    3850 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3600 3850 3650
+Wire Wire Line
+	3850 3650 4250 3650
+Text Label 4250 3450 2    40   ~ 8
+GND
+Text Label 4250 3650 2    40   ~ 8
+VCC
+Text Label 4250 3850 2    40   ~ 8
+SDA
+Text Label 4250 4050 2    40   ~ 8
+SCL
+Text Label 4250 3250 2    40   ~ 8
+INT
+Text GLabel 4000 3250 0    40   Input ~ 8
+INT_M
+Wire Wire Line
+	4000 3250 4250 3250
+Text GLabel 4000 3850 0    40   Input ~ 8
+I2C_2_SDA
+Text GLabel 4000 4050 0    40   Input ~ 8
+I2C_2_SCL
+Wire Wire Line
+	4000 4050 4250 4050
+Wire Wire Line
+	4250 3850 4000 3850
+$Comp
+L CONN_01X04 P13
+U 1 1 542BE03B
+P 7900 3550
+F 0 "P13" H 7900 4000 50  0000 C CNN
+F 1 "CONN_01X04" V 8050 3550 50  0000 C CNN
+F 2 "" H 7900 3550 60  0000 C CNN
+F 3 "" H 7900 3550 60  0000 C CNN
+	1    7900 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 3V3 #PWR079
+U 1 1 542BE11C
+P 7500 3200
+F 0 "#PWR079" H 7500 3300 40  0001 C CNN
+F 1 "3V3" H 7500 3325 40  0000 C CNN
+F 2 "" H 7500 3200 40  0000 C CNN
+F 3 "" H 7500 3200 40  0000 C CNN
+	1    7500 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L DGND #PWR080
+U 1 1 542BE130
+P 7500 3500
+F 0 "#PWR080" H 7500 3500 40  0001 C CNN
+F 1 "DGND" H 7500 3430 40  0000 C CNN
+F 2 "" H 7500 3500 40  0000 C CNN
+F 3 "" H 7500 3500 40  0000 C CNN
+	1    7500 3500
+	1    0    0    -1  
+$EndComp
+Text GLabel 7350 3850 0    40   Input ~ 8
+I2C_2_SCL
+Text GLabel 7350 3650 0    40   Input ~ 8
+I2C_2_SDA
+Wire Wire Line
+	7500 3200 7500 3250
+Wire Wire Line
+	7500 3250 7700 3250
+Wire Wire Line
+	7700 3450 7500 3450
+Wire Wire Line
+	7500 3450 7500 3500
+Wire Wire Line
+	7350 3650 7700 3650
+Wire Wire Line
+	7350 3850 7700 3850
+Text Label 7700 3650 2    40   ~ 8
+SDA
+Text Label 7700 3850 2    40   ~ 8
+SCL
+Text Label 7700 3450 2    40   ~ 8
+GND
+Text Label 7700 3250 2    40   ~ 8
+VIN
+Wire Notes Line
+	6650 2800 8500 2800
+Wire Notes Line
+	8500 2800 8500 4050
+Wire Notes Line
+	8500 4050 6650 4050
+Wire Notes Line
+	6650 4050 6650 2800
+Wire Notes Line
+	3400 2800 4950 2800
+Wire Notes Line
+	4950 2800 4950 4250
+Wire Notes Line
+	4950 4250 3400 4250
+Wire Notes Line
+	3400 4250 3400 2800
+Wire Notes Line
+	5150 2800 6450 2800
+Wire Notes Line
+	6450 2800 6450 4050
+Wire Notes Line
+	6450 4050 5150 4050
+Wire Notes Line
+	5150 4050 5150 2800
+$EndSCHEMATC
