@@ -1,4 +1,4 @@
-update=Tue 30 Sep 2014 11:02:50 AM CEST
+update=Sun 23 Nov 2014 09:04:18 PM CET
 version=1
 last_client=kicad
 [cvpcb]
@@ -25,12 +25,14 @@ SolderMaskMinWidth=0.000000000000
 DrawSegmentWidth=0.200000000000
 BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=
 [eeschema/libraries]
-LibName1=/home/saladin/Documents/SPJ-RobotsArena/schematics_and_pcbs/library/spj-robots-arena
-LibName2=/home/saladin/Documents/SPJ-RobotsArena/schematics_and_pcbs/library/sma
-LibName3=/home/saladin/Documents/SPJ-RobotsArena/schematics_and_pcbs/library/dips-s
+LibName1=library/_dips-s
+LibName2=library/_memory
+LibName3=library/_power
+LibName4=library/_sensors
+LibName5=library/_connectors
+[general]
+version=1
