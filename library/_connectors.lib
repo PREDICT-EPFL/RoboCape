@@ -162,6 +162,28 @@ X ~ 4 -50 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# JST_2
+#
+DEF JST_2 P 0 40 Y N 1 F N
+F0 "P" 0 150 50 H V C CNN
+F1 "JST_2" 100 0 50 V V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+$FPLIST
+ Pin_Header_Straight_1X02
+ Pin_Header_Angled_1X02
+ Socket_Strip_Straight_1X02
+ Socket_Strip_Angled_1X02
+$ENDFPLIST
+DRAW
+S -50 -45 10 -55 0 1 0 N
+S -50 55 10 45 0 1 0 N
+S -50 100 50 -100 0 1 0 N
+X BAT- 1 -200 50 150 R 50 50 1 1 P
+X BAT+ 2 -200 -50 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # SMA
 #
 DEF SMA J 0 40 N N 1 F N
