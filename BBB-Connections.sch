@@ -350,7 +350,7 @@ Wire Wire Line
 	8150 2850 7800 2850
 Wire Wire Line
 	7800 2950 8150 2950
-Text GLabel 8150 3750 2    40   Input ~ 0
+Text GLabel 8150 2350 2    40   Input ~ 0
 PWM_8
 Wire Wire Line
 	8150 3750 7800 3750
@@ -366,11 +366,11 @@ Text Label 7000 2650 2    40   ~ 0
 I2C2_SCL
 Text Label 7800 3050 0    40   ~ 0
 ECAPPWM2
-Text GLabel 8150 3050 2    40   Input ~ 0
+Text GLabel 8150 2450 2    40   Input ~ 0
 PWM_7
 Wire Wire Line
 	8150 3050 7800 3050
-Text GLabel 8150 2750 2    40   Input ~ 0
+Text GLabel 6650 2750 0    40   Input ~ 0
 PWM_6
 Wire Wire Line
 	7800 2750 8150 2750
@@ -378,25 +378,25 @@ Text Label 7800 2750 0    40   ~ 0
 EHRPWM0A
 Text Label 7800 2350 0    40   ~ 0
 EHRPWM1A
-Text GLabel 8150 2350 2    40   Input ~ 0
+Text GLabel 8150 3750 2    40   Input ~ 0
 PWM_3
 Wire Wire Line
 	8150 2350 7800 2350
 Text Label 7800 2450 0    40   ~ 0
 EHRPWM1B
-Text GLabel 8150 2450 2    40   Input ~ 0
+Text GLabel 8150 3050 2    40   Input ~ 0
 PWM_4
 Wire Wire Line
 	8150 2450 7800 2450
 Text Label 3800 2650 2    40   ~ 0
 EHRPWM2A
-Text GLabel 3400 2650 0    40   Input ~ 0
+Text GLabel 3400 2350 0    40   Input ~ 0
 PWM_1
 Wire Wire Line
 	3400 2650 3800 2650
 Text Label 3800 2350 2    40   ~ 0
 EHRPWM2B
-Text GLabel 3400 2350 0    40   Input ~ 0
+Text GLabel 3400 2650 0    40   Input ~ 0
 PWM_2
 Wire Wire Line
 	3400 2350 3800 2350
@@ -404,7 +404,7 @@ Text GLabel 5000 2450 2    40   Input ~ 0
 INT_M
 Text Label 7000 2750 2    40   ~ 0
 EHRPWM0B
-Text GLabel 6650 2750 0    40   Input ~ 0
+Text GLabel 8150 2750 2    40   Input ~ 0
 PWM_5
 Wire Wire Line
 	6650 2750 7000 2750
