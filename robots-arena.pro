@@ -1,4 +1,4 @@
-update=Mon 24 Nov 2014 11:18:15 AM CET
+update=Mon 24 Nov 2014 06:24:47 PM CET
 version=1
 last_client=kicad
 [cvpcb]
@@ -61,10 +61,8 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=library/_dips-s
-LibName32=library/_memory
-LibName33=library/_power
-LibName34=library/_sensors
-LibName35=library/_xbee
-LibName36=library/_connectors
+LibName31=library/_memory
+LibName32=library/_sensors
+LibName33=library/_xbee
+LibName34=library/_connectors
 
