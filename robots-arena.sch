@@ -1552,19 +1552,19 @@ Connection ~ 6050 6550
 Wire Wire Line
 	5950 6350 6050 6350
 Connection ~ 6050 6450
-Text GLabel 5350 6350 0    40   Input ~ 0
-ADC_RAW_0
-Text GLabel 5350 6450 0    40   Input ~ 0
-ADC_RAW_1
-Text GLabel 5350 6550 0    40   Input ~ 0
-ADC_RAW_2
-Text GLabel 5350 6650 0    40   Input ~ 0
-ADC_RAW_3
-Text GLabel 5350 6750 0    40   Input ~ 0
-ADC_RAW_4
 Text GLabel 5350 6850 0    40   Input ~ 0
-ADC_RAW_5
+ADC_RAW_0
 Text GLabel 5350 6950 0    40   Input ~ 0
+ADC_RAW_1
+Text GLabel 5350 6650 0    40   Input ~ 0
+ADC_RAW_2
+Text GLabel 5350 6750 0    40   Input ~ 0
+ADC_RAW_3
+Text GLabel 5350 6450 0    40   Input ~ 0
+ADC_RAW_4
+Text GLabel 5350 6550 0    40   Input ~ 0
+ADC_RAW_5
+Text GLabel 5350 6350 0    40   Input ~ 0
 ADC_RAW_6
 Wire Wire Line
 	5350 6350 5450 6350

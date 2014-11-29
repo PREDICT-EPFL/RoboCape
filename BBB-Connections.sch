@@ -570,7 +570,7 @@ SENSE
 Text Notes 6750 4400 0    80   ~ 16
 Battery management
 NoConn ~ 6850 2800
-Text GLabel 2250 4550 0    40   Input ~ 0
+Text GLabel 4550 5900 0    40   Input ~ 0
 ADC_RAW_0
 $Comp
 L DGND #PWR071
@@ -583,7 +583,7 @@ F 3 "" H 2450 5650 40  0000 C CNN
 	1    2450 5650
 	1    0    0    -1  
 $EndComp
-Text GLabel 2650 5050 2    40   Input ~ 0
+Text GLabel 4950 6400 2    40   Input ~ 0
 ADC_IN_0
 Text GLabel 5700 3300 0    40   Input ~ 0
 ADC_IN_0
@@ -914,7 +914,7 @@ Wire Wire Line
 Connection ~ 2450 5050
 Connection ~ 2450 5100
 Connection ~ 2450 5600
-Text GLabel 3400 4550 0    40   Input ~ 0
+Text GLabel 3400 5900 0    40   Input ~ 0
 ADC_RAW_2
 $Comp
 L DGND #PWR073
@@ -927,7 +927,7 @@ F 3 "" H 3600 5650 40  0000 C CNN
 	1    3600 5650
 	1    0    0    -1  
 $EndComp
-Text GLabel 3800 5050 2    40   Input ~ 0
+Text GLabel 3800 6400 2    40   Input ~ 0
 ADC_IN_2
 $Comp
 L R R18
@@ -981,7 +981,7 @@ Wire Wire Line
 Connection ~ 3600 5050
 Connection ~ 3600 5100
 Connection ~ 3600 5600
-Text GLabel 4550 4550 0    40   Input ~ 0
+Text GLabel 2250 5900 0    40   Input ~ 0
 ADC_RAW_4
 $Comp
 L DGND #PWR074
@@ -994,7 +994,7 @@ F 3 "" H 4750 5650 40  0000 C CNN
 	1    4750 5650
 	1    0    0    -1  
 $EndComp
-Text GLabel 4950 5050 2    40   Input ~ 0
+Text GLabel 2650 6400 2    40   Input ~ 0
 ADC_IN_4
 $Comp
 L R R22
@@ -1048,7 +1048,7 @@ Wire Wire Line
 Connection ~ 4750 5050
 Connection ~ 4750 5100
 Connection ~ 4750 5600
-Text GLabel 5700 4550 0    40   Input ~ 0
+Text GLabel 2250 4550 0    40   Input ~ 0
 ADC_RAW_6
 $Comp
 L DGND #PWR075
@@ -1061,7 +1061,7 @@ F 3 "" H 5900 5650 40  0000 C CNN
 	1    5900 5650
 	1    0    0    -1  
 $EndComp
-Text GLabel 6100 5050 2    40   Input ~ 0
+Text GLabel 2650 5050 2    40   Input ~ 0
 ADC_IN_6
 $Comp
 L R R26
@@ -1115,7 +1115,7 @@ Wire Wire Line
 Connection ~ 5900 5050
 Connection ~ 5900 5100
 Connection ~ 5900 5600
-Text GLabel 2250 5900 0    40   Input ~ 0
+Text GLabel 5700 4550 0    40   Input ~ 0
 ADC_RAW_1
 $Comp
 L DGND #PWR076
@@ -1128,7 +1128,7 @@ F 3 "" H 2450 7000 40  0000 C CNN
 	1    2450 7000
 	1    0    0    -1  
 $EndComp
-Text GLabel 2650 6400 2    40   Input ~ 0
+Text GLabel 6100 5050 2    40   Input ~ 0
 ADC_IN_1
 $Comp
 L R R16
@@ -1182,7 +1182,7 @@ Wire Wire Line
 Connection ~ 2450 6400
 Connection ~ 2450 6450
 Connection ~ 2450 6950
-Text GLabel 3400 5900 0    40   Input ~ 0
+Text GLabel 4550 4550 0    40   Input ~ 0
 ADC_RAW_3
 $Comp
 L DGND #PWR077
@@ -1195,7 +1195,7 @@ F 3 "" H 3600 7000 40  0000 C CNN
 	1    3600 7000
 	1    0    0    -1  
 $EndComp
-Text GLabel 3800 6400 2    40   Input ~ 0
+Text GLabel 4950 5050 2    40   Input ~ 0
 ADC_IN_3
 $Comp
 L R R20
@@ -1249,7 +1249,7 @@ Wire Wire Line
 Connection ~ 3600 6400
 Connection ~ 3600 6450
 Connection ~ 3600 6950
-Text GLabel 4550 5900 0    40   Input ~ 0
+Text GLabel 3400 4550 0    40   Input ~ 0
 ADC_RAW_5
 $Comp
 L DGND #PWR078
@@ -1314,7 +1314,7 @@ Wire Wire Line
 Connection ~ 4750 6400
 Connection ~ 4750 6450
 Connection ~ 4750 6950
-Text GLabel 4950 6400 2    40   Input ~ 0
+Text GLabel 3800 5050 2    40   Input ~ 0
 ADC_IN_5
 Text Notes 1450 4400 0    80   ~ 16
 ADC 5V to 1.8V voltage conversion & filtering
