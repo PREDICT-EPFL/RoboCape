@@ -1,5 +1,5 @@
 (fp_lib_table
-  (lib (name RA_connectors)(type KiCad)(uri /home/saladin/Documents/SPJ-RobotsArena/electronics/footprints/_connectors.pretty)(options "")(descr ""))
-  (lib (name RA_logo)(type KiCad)(uri /home/saladin/Documents/SPJ-RobotsArena/electronics/footprints/_logo.pretty)(options "")(descr ""))
-  (lib (name RA_sensors)(type KiCad)(uri /home/saladin/Documents/SPJ-RobotsArena/electronics/footprints/_sensors.pretty)(options "")(descr ""))
+  (lib (name RA_connectors)(type KiCad)(uri ${KIPRJMOD}/footprints/_connectors.pretty)(options "")(descr ""))
+  (lib (name RA_logo)(type KiCad)(uri ${KIPRJMOD}footprints/_logo.pretty)(options "")(descr ""))
+  (lib (name RA_sensors)(type KiCad)(uri ${KIPRJMOD}footprints/_sensors.pretty)(options "")(descr ""))
 )
