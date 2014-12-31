@@ -32,11 +32,12 @@ if you want to make the cape extension by yourself.
 
 TODO
 ----
+* Images
 * Add a bill of materials
-* Detail choice of components and circuitry in wiki
+* Detail choice of components and circuitry in [wiki](https://github.com/SyrianSpock/robot-arena/wiki) (see Technical documentation)
 
 References
 ----------
-* Dedicated Wiki section
+* [Project's wiki](https://github.com/SyrianSpock/robot-arena/wiki)
 * KiCad EDA suite
 * Beaglebone Black
