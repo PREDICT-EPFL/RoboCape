@@ -51,7 +51,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 4
+Sheet 4 4
 Title ""
 Date ""
 Rev ""
@@ -93,7 +93,11 @@ F 3 "" H 2450 2125 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2450 2150 2950 2150
+	2450 2150 2725 2150
+Wire Wire Line
+	2725 2150 2900 2150
+Wire Wire Line
+	2900 2150 2950 2150
 Wire Wire Line
 	2900 2150 2900 2250
 Wire Wire Line
@@ -111,7 +115,9 @@ F 3 "" H 2450 2475 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2450 2450 2950 2450
+	2450 2450 2725 2450
+Wire Wire Line
+	2725 2450 2950 2450
 $Comp
 L C_Small C?
 U 1 1 55A53B36
@@ -135,10 +141,14 @@ F 3 "" H 2450 2300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2450 2125 2450 2200
+	2450 2125 2450 2150
+Wire Wire Line
+	2450 2150 2450 2200
 Connection ~ 2450 2150
 Wire Wire Line
-	2450 2400 2450 2475
+	2450 2400 2450 2450
+Wire Wire Line
+	2450 2450 2450 2475
 Connection ~ 2450 2450
 Wire Wire Line
 	2725 2400 2725 2450
@@ -222,4 +232,98 @@ Wire Wire Line
 	4550 3050 5025 3050
 Wire Wire Line
 	5025 3250 5025 3300
+$Comp
+L MS5611-01BA U?
+U 1 1 55A562A6
+P 8100 2750
+F 0 "U?" H 8450 3150 50  0000 C CNN
+F 1 "MS5611-01BA" H 7950 3150 50  0000 C CNN
+F 2 "MODULE" H 8100 2750 50  0001 C CNN
+F 3 "DOCUMENTATION" H 8100 2750 50  0001 C CNN
+	1    8100 2750
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8850 2750
+$Comp
+L GND #PWR?
+U 1 1 55A56310
+P 8900 3000
+F 0 "#PWR?" H 8900 2750 50  0001 C CNN
+F 1 "GND" H 8900 2850 50  0000 C CNN
+F 2 "" H 8900 3000 60  0000 C CNN
+F 3 "" H 8900 3000 60  0000 C CNN
+	1    8900 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 2850 8900 2850
+Wire Wire Line
+	8900 2850 8900 2950
+Wire Wire Line
+	8900 2950 8900 3000
+Wire Wire Line
+	8850 2950 8900 2950
+Connection ~ 8900 2950
+Text HLabel 8900 2650 2    39   Input ~ 0
+I2C2_SDA
+Text HLabel 8900 2550 2    39   Input ~ 0
+I2C2_SCL
+Wire Wire Line
+	8900 2550 8850 2550
+Wire Wire Line
+	8850 2650 8900 2650
+$Comp
+L +3.3V_A #PWR?
+U 1 1 55A56473
+P 7175 2500
+F 0 "#PWR?" H 7175 2460 30  0001 C CNN
+F 1 "+3.3V_A" H 7175 2610 30  0000 C CNN
+F 2 "" H 7175 2500 60  0000 C CNN
+F 3 "" H 7175 2500 60  0000 C CNN
+	1    7175 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C?
+U 1 1 55A564A3
+P 7175 2800
+F 0 "C?" H 7185 2870 50  0000 L CNN
+F 1 "100n" H 7185 2720 50  0000 L CNN
+F 2 "" H 7175 2800 60  0000 C CNN
+F 3 "" H 7175 2800 60  0000 C CNN
+	1    7175 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 2650 7175 2650
+Wire Wire Line
+	7175 2500 7175 2550
+Wire Wire Line
+	7175 2550 7175 2650
+Wire Wire Line
+	7175 2650 7175 2700
+Wire Wire Line
+	7175 2900 7175 2950
+Wire Wire Line
+	7175 2950 7175 3000
+Wire Wire Line
+	7175 2950 7350 2950
+Connection ~ 7175 2650
+Wire Wire Line
+	7350 2550 7175 2550
+Connection ~ 7175 2550
+$Comp
+L GND #PWR?
+U 1 1 55A566F0
+P 7175 3000
+F 0 "#PWR?" H 7175 2750 50  0001 C CNN
+F 1 "GND" H 7175 2850 50  0000 C CNN
+F 2 "" H 7175 3000 60  0000 C CNN
+F 3 "" H 7175 3000 60  0000 C CNN
+	1    7175 3000
+	1    0    0    -1  
+$EndComp
+Connection ~ 7175 2950
+Text Notes 8975 2925 0    39   ~ 0
+I2C address: 0x77\n
 $EndSCHEMATC

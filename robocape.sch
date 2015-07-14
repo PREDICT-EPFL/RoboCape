@@ -117,17 +117,6 @@ F 3 "" H 3725 5375 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 900  6050 800  1475
-U 55A505C3
-F0 "Sensors" 60
-F1 "sensors.sch" 60
-F2 "SPI1_SCK" I R 1700 6100 39 
-F3 "SPI1_MOSI" I R 1700 6150 39 
-F4 "SPI1_MISO" I R 1700 6200 39 
-F5 "SPI1_CS" I R 1700 6250 39 
-F6 "SPI1_INT" I R 1700 6300 39 
-$EndSheet
-$Sheet
 S 2950 6050 1500 900 
 U 55A505CD
 F0 "Connectivity" 60
@@ -404,26 +393,26 @@ F 3 "" H 7925 2275 60  0000 C CNN
 $EndComp
 Text Notes 8000 2450 0    39   ~ 0
 Jumper controls\nwrite protection.\nRead only mode \nwhen jumper not connected
-Text Label 1750 6100 0    39   ~ 0
+Text Label 1725 6100 0    39   ~ 0
 SPI1_SCK
 Wire Wire Line
-	1750 6100 1700 6100
-Text Label 1750 6150 0    39   ~ 0
+	1725 6100 1675 6100
+Text Label 1725 6150 0    39   ~ 0
 SPI1_MOSI
-Text Label 1750 6200 0    39   ~ 0
+Text Label 1725 6200 0    39   ~ 0
 SPI1_MISO
-Text Label 1750 6250 0    39   ~ 0
+Text Label 1725 6250 0    39   ~ 0
 SPI1_CS
-Text Label 1750 6300 0    39   ~ 0
+Text Label 1725 6300 0    39   ~ 0
 SPI1_INT
 Wire Wire Line
-	1750 6150 1700 6150
+	1725 6150 1675 6150
 Wire Wire Line
-	1750 6200 1700 6200
+	1725 6200 1675 6200
 Wire Wire Line
-	1700 6250 1750 6250
+	1675 6250 1725 6250
 Wire Wire Line
-	1750 6300 1700 6300
+	1725 6300 1675 6300
 Text Label 4700 3075 2    39   ~ 0
 SPI1_SCK
 Text Label 4700 2975 2    39   ~ 0
@@ -444,4 +433,25 @@ Wire Wire Line
 	4700 3075 4750 3075
 Wire Wire Line
 	4700 2875 4750 2875
+$Sheet
+S 900  6050 775  900 
+U 55A505C3
+F0 "Sensors" 60
+F1 "sensors.sch" 60
+F2 "SPI1_SCK" I R 1675 6100 39 
+F3 "SPI1_MOSI" I R 1675 6150 39 
+F4 "SPI1_MISO" I R 1675 6200 39 
+F5 "SPI1_CS" I R 1675 6250 39 
+F6 "SPI1_INT" I R 1675 6300 39 
+F7 "I2C2_SDA" I R 1675 6400 39 
+F8 "I2C2_SCL" I R 1675 6450 39 
+$EndSheet
+Text Label 1725 6400 0    39   ~ 0
+I2C2_SDA
+Wire Wire Line
+	1725 6400 1675 6400
+Text Label 1725 6450 0    39   ~ 0
+I2C2_SCL
+Wire Wire Line
+	1725 6450 1675 6450
 $EndSCHEMATC
