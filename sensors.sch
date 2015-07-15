@@ -159,15 +159,15 @@ Connection ~ 2725 2150
 NoConn ~ 4550 2150
 NoConn ~ 4550 2250
 Text HLabel 4600 2400 2    39   Input ~ 0
-SPI1_SCK
+MPU9250_SCK
 Wire Wire Line
 	4600 2400 4550 2400
 Text HLabel 4600 2500 2    39   Input ~ 0
-SPI1_MOSI
+MPU9250_MOSI
 Text HLabel 4600 2650 2    39   Input ~ 0
-SPI1_MISO
+MPU9250_MISO
 Text HLabel 4600 2800 2    39   Input ~ 0
-SPI1_CS
+MPU9250_CS
 Wire Wire Line
 	4600 2500 4550 2500
 Wire Wire Line
@@ -175,7 +175,7 @@ Wire Wire Line
 Wire Wire Line
 	4550 2800 4600 2800
 Text HLabel 4600 2950 2    39   Input ~ 0
-SPI1_INT
+MPU9250_INT
 Wire Wire Line
 	4600 2950 4550 2950
 $Comp
