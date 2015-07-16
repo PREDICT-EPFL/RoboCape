@@ -126,6 +126,15 @@ F3 "XBEE_TX" I R 3925 6150 39
 F4 "XBEE_CTS" I R 3925 6200 39 
 F5 "XBEE_RTS" I R 3925 6250 39 
 F6 "XBEE_DTR" I R 3925 6300 39 
+F7 "I2C2_SDA" I R 3925 6400 39 
+F8 "I2C2_SCL" I R 3925 6450 39 
+F9 "PWMGEN_OE" I R 3925 6500 39 
+F10 "PWM_0" I R 3925 6600 39 
+F11 "PWM_1" I R 3925 6650 39 
+F12 "PWM_3" I R 3925 6750 39 
+F13 "PWM_4" I R 3925 6800 39 
+F14 "PWM_2" I R 3925 6700 39 
+F15 "PWM_5" I R 3925 6850 39 
 $EndSheet
 $Sheet
 S 4900 6050 1500 900 
@@ -368,7 +377,7 @@ Wire Wire Line
 Wire Wire Line
 	9775 1200 9775 1225
 Text Notes 10250 1400 0    39   ~ 0
-0 ohm resistors \nto select address\non i2c bus
+0 ohm resistors \nto select address\non i2c bus: 0x54 to 0x57\n
 Wire Wire Line
 	9475 1925 9425 1925
 Wire Wire Line
@@ -507,4 +516,132 @@ Wire Wire Line
 	3550 2975 3500 2975
 Wire Wire Line
 	4700 2875 4750 2875
+Text Notes 1200 4700 0    47   ~ 0
+I2C adresses:\nEEPROM:	0x54 to 0x57\nBarometer:	0x77\n
+Text Label 8475 3550 2    39   ~ 0
+I2C2_SDA
+Text Label 8475 3600 2    39   ~ 0
+I2C2_SCL
+$Comp
+L R_Small R?
+U 1 1 55A80D7C
+P 8575 3400
+F 0 "R?" H 8605 3420 50  0000 L CNN
+F 1 "4.7k" H 8605 3360 50  0000 L CNN
+F 2 "" H 8575 3400 60  0000 C CNN
+F 3 "" H 8575 3400 60  0000 C CNN
+	1    8575 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 55A80E92
+P 8825 3400
+F 0 "R?" H 8855 3420 50  0000 L CNN
+F 1 "4.7k" H 8855 3360 50  0000 L CNN
+F 2 "" H 8825 3400 60  0000 C CNN
+F 3 "" H 8825 3400 60  0000 C CNN
+	1    8825 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8475 3550 8575 3550
+Wire Wire Line
+	8575 3550 8575 3500
+Wire Wire Line
+	8475 3600 8825 3600
+Wire Wire Line
+	8825 3600 8825 3500
+$Comp
+L +3.3V_A #PWR?
+U 1 1 55A80FFB
+P 8575 3250
+F 0 "#PWR?" H 8575 3210 30  0001 C CNN
+F 1 "+3.3V_A" H 8575 3360 30  0000 C CNN
+F 2 "" H 8575 3250 60  0000 C CNN
+F 3 "" H 8575 3250 60  0000 C CNN
+	1    8575 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8575 3250 8575 3300
+$Comp
+L +3.3V_A #PWR?
+U 1 1 55A810F5
+P 8825 3250
+F 0 "#PWR?" H 8825 3210 30  0001 C CNN
+F 1 "+3.3V_A" H 8825 3360 30  0000 C CNN
+F 2 "" H 8825 3250 60  0000 C CNN
+F 3 "" H 8825 3250 60  0000 C CNN
+	1    8825 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8825 3250 8825 3300
+Text Notes 8200 3050 0    39   ~ 0
+I2C pull-ups\n
+Text Label 6550 2575 0    39   ~ 0
+EHRPWM0A
+Wire Wire Line
+	6550 2575 6500 2575
+Text Label 4700 2575 2    39   ~ 0
+EHRPWM0B
+Wire Wire Line
+	4700 2575 4750 2575
+Text Label 6550 2175 0    39   ~ 0
+EHRPWM1A
+Text Label 6550 2275 0    39   ~ 0
+EHRPWM1B
+Wire Wire Line
+	6550 2275 6500 2275
+Wire Wire Line
+	6500 2175 6550 2175
+Text Label 1750 2475 2    39   ~ 0
+EHRPWM2A
+Wire Wire Line
+	1800 2475 1750 2475
+Text Label 1750 2175 2    39   ~ 0
+EHRPWM2B
+Wire Wire Line
+	1750 2175 1800 2175
+Text Label 3975 6600 0    39   ~ 0
+EHRPWM0A
+Wire Wire Line
+	3975 6600 3925 6600
+Text Label 3975 6650 0    39   ~ 0
+EHRPWM0B
+Text Label 3975 6700 0    39   ~ 0
+EHRPWM1A
+Text Label 3975 6750 0    39   ~ 0
+EHRPWM1B
+Text Label 3975 6800 0    39   ~ 0
+EHRPWM2A
+Text Label 3975 6850 0    39   ~ 0
+EHRPWM2B
+Wire Wire Line
+	3975 6650 3925 6650
+Wire Wire Line
+	3925 6700 3975 6700
+Wire Wire Line
+	3975 6750 3925 6750
+Wire Wire Line
+	3925 6800 3975 6800
+Wire Wire Line
+	3975 6850 3925 6850
+Text Label 3975 6400 0    39   ~ 0
+I2C2_SDA
+Wire Wire Line
+	3975 6400 3925 6400
+Text Label 3975 6450 0    39   ~ 0
+I2C2_SCL
+Wire Wire Line
+	3975 6450 3925 6450
+Text Label 3975 6500 0    39   ~ 0
+PWMGEN_OE
+Wire Wire Line
+	3975 6500 3925 6500
+Text Label 4700 2775 2    39   ~ 0
+PWMGEN_OE
+Wire Wire Line
+	4700 2775 4750 2775
 $EndSCHEMATC
