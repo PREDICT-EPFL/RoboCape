@@ -117,7 +117,7 @@ F 3 "" H 3725 5375 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 2950 6050 975  900 
+S 2950 6050 975  1250
 U 55A505CD
 F0 "Connectivity" 60
 F1 "connectivity.sch" 60
@@ -135,6 +135,8 @@ F12 "PWM_3" I R 3925 6750 39
 F13 "PWM_4" I R 3925 6800 39 
 F14 "PWM_2" I R 3925 6700 39 
 F15 "PWM_5" I R 3925 6850 39 
+F16 "CAN_TX" I R 3925 6950 39 
+F17 "CAN_RX" I R 3925 7000 39 
 $EndSheet
 $Sheet
 S 4900 6050 1500 900 
@@ -644,4 +646,12 @@ Text Label 4700 2775 2    39   ~ 0
 PWMGEN_OE
 Wire Wire Line
 	4700 2775 4750 2775
+Text Label 3975 7000 0    39   ~ 0
+DCAN1_RX
+Text Label 3975 6950 0    39   ~ 0
+DCAN1_TX
+Wire Wire Line
+	3975 6950 3925 6950
+Wire Wire Line
+	3925 7000 3975 7000
 $EndSCHEMATC
