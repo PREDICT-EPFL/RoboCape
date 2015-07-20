@@ -1,4 +1,4 @@
-update=Die 14 Jul 2015 14:14:10 CEST
+update=Mon 20 Jul 2015 19:18:25 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -77,3 +77,13 @@ LibName45=kicad-lib/components/National
 LibName46=kicad-lib/components/Mec
 LibName47=kicad-lib/components/IRF
 LibName48=kicad-lib/components/Comp2014
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=pdf/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
