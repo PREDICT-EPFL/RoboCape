@@ -117,7 +117,7 @@ F 3 "" H 3725 5375 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 2950 6050 975  1250
+S 2950 6050 975  1500
 U 55A505CD
 F0 "Connectivity" 60
 F1 "connectivity.sch" 60
@@ -132,11 +132,19 @@ F9 "PWMGEN_OE" I R 3925 6500 39
 F10 "PWM_0" I R 3925 6600 39 
 F11 "PWM_1" I R 3925 6650 39 
 F12 "PWM_3" I R 3925 6750 39 
-F13 "PWM_4" I R 3925 6800 39 
-F14 "PWM_2" I R 3925 6700 39 
-F15 "PWM_5" I R 3925 6850 39 
-F16 "CAN_TX" I R 3925 6950 39 
-F17 "CAN_RX" I R 3925 7000 39 
+F13 "PWM_2" I R 3925 6700 39 
+F14 "CAN_TX" I R 3925 6850 39 
+F15 "CAN_RX" I R 3925 6900 39 
+F16 "UART_EXT_TX" I R 3925 7000 39 
+F17 "UART_EXT_RX" I R 3925 7050 39 
+F18 "VCC_ADC" I R 3925 7150 39 
+F19 "ADC_0" I R 3925 7200 39 
+F20 "ADC_1" I R 3925 7250 39 
+F21 "ADC_2" I R 3925 7300 39 
+F22 "ADC_3" I R 3925 7350 39 
+F23 "ADC_4" I R 3925 7400 39 
+F24 "ADC_5" I R 3925 7450 39 
+F25 "ADC_6" I R 3925 7500 39 
 $EndSheet
 $Sheet
 S 4900 6050 725  900 
@@ -268,6 +276,416 @@ F 3 "" H 10025 1325 60  0000 C CNN
 	1    10025 1325
 	1    0    0    -1  
 $EndComp
+$Comp
+L R_Small R?
+U 1 1 55A51BF0
+P 10275 1525
+F 0 "R?" V 10325 1450 39  0000 R CNN
+F 1 "0" V 10275 1525 39  0000 C CNN
+F 2 "" H 10275 1525 60  0000 C CNN
+F 3 "" H 10275 1525 60  0000 C CNN
+	1    10275 1525
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 55A51E4F
+P 10275 1625
+F 0 "R?" V 10325 1550 39  0000 R CNN
+F 1 "0" V 10275 1625 39  0000 C CNN
+F 2 "" H 10275 1625 60  0000 C CNN
+F 3 "" H 10275 1625 60  0000 C CNN
+	1    10275 1625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 55A51ECA
+P 10500 1725
+F 0 "#PWR?" H 10500 1475 50  0001 C CNN
+F 1 "GND" H 10500 1575 50  0000 C CNN
+F 2 "" H 10500 1725 60  0000 C CNN
+F 3 "" H 10500 1725 60  0000 C CNN
+	1    10500 1725
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR?
+U 1 1 55A520BE
+P 9525 1200
+F 0 "#PWR?" H 9525 1050 50  0001 C CNN
+F 1 "+3V3" H 9525 1340 50  0000 C CNN
+F 2 "" H 9525 1200 60  0000 C CNN
+F 3 "" H 9525 1200 60  0000 C CNN
+	1    9525 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR?
+U 1 1 55A52127
+P 9775 1200
+F 0 "#PWR?" H 9775 1050 50  0001 C CNN
+F 1 "+3V3" H 9775 1340 50  0000 C CNN
+F 2 "" H 9775 1200 60  0000 C CNN
+F 3 "" H 9775 1200 60  0000 C CNN
+	1    9775 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR?
+U 1 1 55A5215C
+P 10025 1200
+F 0 "#PWR?" H 10025 1050 50  0001 C CNN
+F 1 "+3V3" H 10025 1340 50  0000 C CNN
+F 2 "" H 10025 1200 60  0000 C CNN
+F 3 "" H 10025 1200 60  0000 C CNN
+	1    10025 1200
+	1    0    0    -1  
+$EndComp
+Text Notes 10250 1400 0    39   ~ 0
+0 ohm resistors \nto select address\non i2c bus: 0x54 to 0x57\n
+Text Label 9475 2025 0    39   ~ 0
+I2C2_SDA
+Text Label 9475 1925 0    39   ~ 0
+I2C2_SCL
+Text Label 4700 2475 2    39   ~ 0
+I2C2_SCL
+Text Label 6550 2475 0    39   ~ 0
+I2C2_SDA
+$Comp
+L Jumper_NC_Small JP?
+U 1 1 55A5316E
+P 7925 2275
+F 0 "JP?" H 7925 2355 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 7935 2215 50  0001 C CNN
+F 2 "" H 7925 2275 60  0000 C CNN
+F 3 "" H 7925 2275 60  0000 C CNN
+	1    7925 2275
+	0    -1   -1   0   
+$EndComp
+Text Notes 8000 2450 0    39   ~ 0
+Jumper controls\nwrite protection.\nRead only mode \nwhen jumper not connected
+Text Label 1725 6100 0    39   ~ 0
+SPI1_SCK
+Text Label 1725 6150 0    39   ~ 0
+SPI1_MOSI
+Text Label 1725 6200 0    39   ~ 0
+SPI1_MISO
+Text Label 1725 6250 0    39   ~ 0
+SPI1_CS
+Text Label 1725 6300 0    39   ~ 0
+MPU9250_INT
+Text Label 4700 3075 2    39   ~ 0
+SPI1_SCK
+Text Label 4700 2975 2    39   ~ 0
+SPI1_MOSI
+Text Label 6550 2975 0    39   ~ 0
+SPI1_MISO
+Text Label 6550 2875 0    39   ~ 0
+SPI1_CS
+Text Label 4700 2875 2    39   ~ 0
+MPU9250_INT
+$Sheet
+S 900  6050 775  900 
+U 55A505C3
+F0 "Sensors" 60
+F1 "sensors.sch" 60
+F2 "I2C2_SDA" I R 1675 6400 39 
+F3 "I2C2_SCL" I R 1675 6450 39 
+F4 "MPU9250_INT" I R 1675 6300 39 
+F5 "MPU9250_SCK" I R 1675 6100 39 
+F6 "MPU9250_MOSI" I R 1675 6150 39 
+F7 "MPU9250_MISO" I R 1675 6200 39 
+F8 "MPU9250_CS" I R 1675 6250 39 
+F9 "GPS_TX" I R 1675 6650 39 
+F10 "GPS_RX" I R 1675 6600 39 
+F11 "Battery" I R 1675 6550 39 
+$EndSheet
+Text Label 1725 6400 0    39   ~ 0
+I2C2_SDA
+Text Label 1725 6450 0    39   ~ 0
+I2C2_SCL
+Text Label 6550 2675 0    39   ~ 0
+DCAN1_RX
+Text Label 6550 2775 0    39   ~ 0
+DCAN1_TX
+Text Label 3975 6100 0    39   ~ 0
+UART5_TX
+Text Label 3975 6150 0    39   ~ 0
+UART5_RX
+Text Label 3975 6200 0    39   ~ 0
+UART5_RTS
+Text Label 3975 6250 0    39   ~ 0
+UART5_CTS
+Text Label 3975 6300 0    39   ~ 0
+XBEE_DTR
+Text Label 1750 3375 2    39   ~ 0
+UART5_TX
+Text Label 3550 3375 0    39   ~ 0
+UART5_RX
+Text Label 3550 3075 0    39   ~ 0
+UART5_RTS
+Text Label 1750 3075 2    39   ~ 0
+UART5_CTS
+Text Label 3550 2975 0    39   ~ 0
+XBEE_DTR
+Text Notes 1200 4700 0    47   ~ 0
+I2C adresses:\nEEPROM:	0x54 to 0x57\nBarometer:	0x77\n
+Text Label 8475 3550 2    39   ~ 0
+I2C2_SDA
+Text Label 8475 3600 2    39   ~ 0
+I2C2_SCL
+$Comp
+L R_Small R?
+U 1 1 55A80D7C
+P 8575 3400
+F 0 "R?" H 8605 3420 50  0000 L CNN
+F 1 "4.7k" H 8605 3360 50  0000 L CNN
+F 2 "" H 8575 3400 60  0000 C CNN
+F 3 "" H 8575 3400 60  0000 C CNN
+	1    8575 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 55A80E92
+P 8825 3400
+F 0 "R?" H 8855 3420 50  0000 L CNN
+F 1 "4.7k" H 8855 3360 50  0000 L CNN
+F 2 "" H 8825 3400 60  0000 C CNN
+F 3 "" H 8825 3400 60  0000 C CNN
+	1    8825 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V_A #PWR?
+U 1 1 55A80FFB
+P 8575 3250
+F 0 "#PWR?" H 8575 3210 30  0001 C CNN
+F 1 "+3.3V_A" H 8575 3360 30  0000 C CNN
+F 2 "" H 8575 3250 60  0000 C CNN
+F 3 "" H 8575 3250 60  0000 C CNN
+	1    8575 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V_A #PWR?
+U 1 1 55A810F5
+P 8825 3250
+F 0 "#PWR?" H 8825 3210 30  0001 C CNN
+F 1 "+3.3V_A" H 8825 3360 30  0000 C CNN
+F 2 "" H 8825 3250 60  0000 C CNN
+F 3 "" H 8825 3250 60  0000 C CNN
+	1    8825 3250
+	1    0    0    -1  
+$EndComp
+Text Notes 8200 3050 0    39   ~ 0
+I2C pull-ups\n
+Text Label 6550 2175 0    39   ~ 0
+EHRPWM1A
+Text Label 6550 2275 0    39   ~ 0
+EHRPWM1B
+Text Label 1750 2475 2    39   ~ 0
+EHRPWM2A
+Text Label 1750 2175 2    39   ~ 0
+EHRPWM2B
+Text Label 3975 6600 0    39   ~ 0
+EHRPWM1A
+Text Label 3975 6650 0    39   ~ 0
+EHRPWM1B
+Text Label 3975 6700 0    39   ~ 0
+EHRPWM2A
+Text Label 3975 6750 0    39   ~ 0
+EHRPWM2B
+Text Label 3975 6400 0    39   ~ 0
+I2C2_SDA
+Text Label 3975 6450 0    39   ~ 0
+I2C2_SCL
+Text Label 3975 6500 0    39   ~ 0
+PWMGEN_OE
+Text Label 4700 2775 2    39   ~ 0
+PWMGEN_OE
+Text Label 3975 6900 0    39   ~ 0
+DCAN1_RX
+Text Label 3975 6850 0    39   ~ 0
+DCAN1_TX
+$Comp
+L +5V #PWR?
+U 1 1 55ABC5F4
+P 4175 1775
+F 0 "#PWR?" H 4175 1625 50  0001 C CNN
+F 1 "+5V" H 4175 1915 50  0000 C CNN
+F 2 "" H 4175 1775 60  0000 C CNN
+F 3 "" H 4175 1775 60  0000 C CNN
+	1    4175 1775
+	-1   0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 55ABC86A
+P 7050 1775
+F 0 "#PWR?" H 7050 1625 50  0001 C CNN
+F 1 "+5V" H 7050 1915 50  0000 C CNN
+F 2 "" H 7050 1775 60  0000 C CNN
+F 3 "" H 7050 1775 60  0000 C CNN
+	1    7050 1775
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 55ABD079
+P 6550 1575
+F 0 "#PWR?" H 6550 1325 50  0001 C CNN
+F 1 "GND" H 6550 1425 50  0000 C CNN
+F 2 "" H 6550 1575 60  0000 C CNN
+F 3 "" H 6550 1575 60  0000 C CNN
+	1    6550 1575
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 55ABD1F2
+P 4700 1575
+F 0 "#PWR?" H 4700 1325 50  0001 C CNN
+F 1 "GND" H 4700 1425 50  0000 C CNN
+F 2 "" H 4700 1575 60  0000 C CNN
+F 3 "" H 4700 1575 60  0000 C CNN
+	1    4700 1575
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 55ABD7FF
+P 4700 3825
+F 0 "#PWR?" H 4700 3575 50  0001 C CNN
+F 1 "GND" H 4700 3675 50  0000 C CNN
+F 2 "" H 4700 3825 60  0000 C CNN
+F 3 "" H 4700 3825 60  0000 C CNN
+	1    4700 3825
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 55ABDB6D
+P 6550 3825
+F 0 "#PWR?" H 6550 3575 50  0001 C CNN
+F 1 "GND" H 6550 3675 50  0000 C CNN
+F 2 "" H 6550 3825 60  0000 C CNN
+F 3 "" H 6550 3825 60  0000 C CNN
+	1    6550 3825
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 55ABE52B
+P 3550 1575
+F 0 "#PWR?" H 3550 1325 50  0001 C CNN
+F 1 "GND" H 3550 1425 50  0000 C CNN
+F 2 "" H 3550 1575 60  0000 C CNN
+F 3 "" H 3550 1575 60  0000 C CNN
+	1    3550 1575
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 55ABE7A9
+P 1750 1575
+F 0 "#PWR?" H 1750 1325 50  0001 C CNN
+F 1 "GND" H 1750 1425 50  0000 C CNN
+F 2 "" H 1750 1575 60  0000 C CNN
+F 3 "" H 1750 1575 60  0000 C CNN
+	1    1750 1575
+	0    1    1    0   
+$EndComp
+$Comp
+L +3V3 #PWR?
+U 1 1 55ABF0F8
+P 6900 1675
+F 0 "#PWR?" H 6900 1525 50  0001 C CNN
+F 1 "+3V3" H 6900 1815 50  0000 C CNN
+F 2 "" H 6900 1675 60  0000 C CNN
+F 3 "" H 6900 1675 60  0000 C CNN
+	1    6900 1675
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR?
+U 1 1 55ABF4FC
+P 4350 1675
+F 0 "#PWR?" H 4350 1525 50  0001 C CNN
+F 1 "+3V3" H 4350 1815 50  0000 C CNN
+F 2 "" H 4350 1675 60  0000 C CNN
+F 3 "" H 4350 1675 60  0000 C CNN
+	1    4350 1675
+	1    0    0    -1  
+$EndComp
+Text Label 5675 6125 0    39   ~ 0
+3.3V_A_EN
+Text Label 4700 2675 2    39   ~ 0
+3.3V_A_EN
+Text Label 4700 2075 2    39   ~ 0
+UART4_RX
+Text Label 4700 2175 2    39   ~ 0
+UART4_TX
+Text Label 1725 6600 0    39   ~ 0
+UART4_TX
+Text Label 1725 6650 0    39   ~ 0
+UART4_RX
+Text Label 1725 6550 0    39   ~ 0
+Backup_Battery
+Text Label 5675 6225 0    39   ~ 0
+Backup_Battery
+Text Label 4700 2575 2    39   ~ 0
+UART2_TX
+Text Label 6550 2575 0    39   ~ 0
+UART2_RX
+Text Label 3975 7050 0    39   ~ 0
+UART2_RX
+Text Label 3975 7000 0    39   ~ 0
+UART2_TX
+Text Label 6550 3475 0    39   ~ 0
+ANALOG_1
+Text Label 6550 3375 0    39   ~ 0
+ANALOG_3
+Text Label 6550 3275 0    39   ~ 0
+ANALOG_5
+Text Label 4700 3175 2    39   ~ 0
+ANALOG_4
+Text Label 4700 3275 2    39   ~ 0
+ANALOG_6
+Text Label 4700 3375 2    39   ~ 0
+ANALOG_2
+Text Label 4700 3475 2    39   ~ 0
+ANALOG_0
+$Comp
+L GND #PWR?
+U 1 1 55AD4BA7
+P 7000 3175
+F 0 "#PWR?" H 7000 2925 50  0001 C CNN
+F 1 "GND" H 7000 3025 50  0000 C CNN
+F 2 "" H 7000 3175 60  0000 C CNN
+F 3 "" H 7000 3175 60  0000 C CNN
+	1    7000 3175
+	1    0    0    -1  
+$EndComp
+Text Label 6550 3075 0    39   ~ 0
+VCC_ANALOG
+Text Label 3975 7400 0    39   ~ 0
+ANALOG_4
+Text Label 3975 7500 0    39   ~ 0
+ANALOG_6
+Text Label 3975 7300 0    39   ~ 0
+ANALOG_2
+Text Label 3975 7200 0    39   ~ 0
+ANALOG_0
+Text Label 3975 7250 0    39   ~ 0
+ANALOG_1
+Text Label 3975 7350 0    39   ~ 0
+ANALOG_3
+Text Label 3975 7450 0    39   ~ 0
+ANALOG_5
+Text Label 3975 7150 0    39   ~ 0
+VCC_ANALOG
 Wire Wire Line
 	8275 1375 8275 1525
 Wire Wire Line
@@ -299,41 +717,8 @@ Wire Wire Line
 	9425 1725 10025 1725
 Wire Wire Line
 	10025 1725 10025 1425
-$Comp
-L R_Small R?
-U 1 1 55A51BF0
-P 10275 1525
-F 0 "R?" V 10325 1450 39  0000 R CNN
-F 1 "0" V 10275 1525 39  0000 C CNN
-F 2 "" H 10275 1525 60  0000 C CNN
-F 3 "" H 10275 1525 60  0000 C CNN
-	1    10275 1525
-	0    -1   -1   0   
-$EndComp
-$Comp
-L R_Small R?
-U 1 1 55A51E4F
-P 10275 1625
-F 0 "R?" V 10325 1550 39  0000 R CNN
-F 1 "0" V 10275 1625 39  0000 C CNN
-F 2 "" H 10275 1625 60  0000 C CNN
-F 3 "" H 10275 1625 60  0000 C CNN
-	1    10275 1625
-	0    -1   -1   0   
-$EndComp
 Connection ~ 9775 1625
 Connection ~ 9525 1525
-$Comp
-L GND #PWR?
-U 1 1 55A51ECA
-P 10500 1725
-F 0 "#PWR?" H 10500 1475 50  0001 C CNN
-F 1 "GND" H 10500 1575 50  0000 C CNN
-F 2 "" H 10500 1725 60  0000 C CNN
-F 3 "" H 10500 1725 60  0000 C CNN
-	1    10500 1725
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10500 1525 10500 1725
 Wire Wire Line
@@ -341,88 +726,22 @@ Wire Wire Line
 Wire Wire Line
 	10375 1525 10500 1525
 Connection ~ 10500 1625
-$Comp
-L +3V3 #PWR?
-U 1 1 55A520BE
-P 9525 1200
-F 0 "#PWR?" H 9525 1050 50  0001 C CNN
-F 1 "+3V3" H 9525 1340 50  0000 C CNN
-F 2 "" H 9525 1200 60  0000 C CNN
-F 3 "" H 9525 1200 60  0000 C CNN
-	1    9525 1200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9525 1200 9525 1225
-$Comp
-L +3V3 #PWR?
-U 1 1 55A52127
-P 9775 1200
-F 0 "#PWR?" H 9775 1050 50  0001 C CNN
-F 1 "+3V3" H 9775 1340 50  0000 C CNN
-F 2 "" H 9775 1200 60  0000 C CNN
-F 3 "" H 9775 1200 60  0000 C CNN
-	1    9775 1200
-	1    0    0    -1  
-$EndComp
-$Comp
-L +3V3 #PWR?
-U 1 1 55A5215C
-P 10025 1200
-F 0 "#PWR?" H 10025 1050 50  0001 C CNN
-F 1 "+3V3" H 10025 1340 50  0000 C CNN
-F 2 "" H 10025 1200 60  0000 C CNN
-F 3 "" H 10025 1200 60  0000 C CNN
-	1    10025 1200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10025 1225 10025 1200
 Wire Wire Line
 	9775 1200 9775 1225
-Text Notes 10250 1400 0    39   ~ 0
-0 ohm resistors \nto select address\non i2c bus: 0x54 to 0x57\n
 Wire Wire Line
 	9475 1925 9425 1925
 Wire Wire Line
 	9425 2025 9475 2025
-Text Label 9475 2025 0    39   ~ 0
-I2C2_SDA
-Text Label 9475 1925 0    39   ~ 0
-I2C2_SCL
-Text Label 4700 2475 2    39   ~ 0
-I2C2_SCL
 Wire Wire Line
 	4700 2475 4750 2475
-Text Label 6550 2475 0    39   ~ 0
-I2C2_SDA
 Wire Wire Line
 	6550 2475 6500 2475
-$Comp
-L Jumper_NC_Small JP?
-U 1 1 55A5316E
-P 7925 2275
-F 0 "JP?" H 7925 2355 50  0000 C CNN
-F 1 "Jumper_NC_Small" H 7935 2215 50  0001 C CNN
-F 2 "" H 7925 2275 60  0000 C CNN
-F 3 "" H 7925 2275 60  0000 C CNN
-	1    7925 2275
-	0    -1   -1   0   
-$EndComp
-Text Notes 8000 2450 0    39   ~ 0
-Jumper controls\nwrite protection.\nRead only mode \nwhen jumper not connected
-Text Label 1725 6100 0    39   ~ 0
-SPI1_SCK
 Wire Wire Line
 	1725 6100 1675 6100
-Text Label 1725 6150 0    39   ~ 0
-SPI1_MOSI
-Text Label 1725 6200 0    39   ~ 0
-SPI1_MISO
-Text Label 1725 6250 0    39   ~ 0
-SPI1_CS
-Text Label 1725 6300 0    39   ~ 0
-MPU9250_INT
 Wire Wire Line
 	1725 6150 1675 6150
 Wire Wire Line
@@ -431,16 +750,6 @@ Wire Wire Line
 	1675 6250 1725 6250
 Wire Wire Line
 	1725 6300 1675 6300
-Text Label 4700 3075 2    39   ~ 0
-SPI1_SCK
-Text Label 4700 2975 2    39   ~ 0
-SPI1_MOSI
-Text Label 6550 2975 0    39   ~ 0
-SPI1_MISO
-Text Label 6550 2875 0    39   ~ 0
-SPI1_CS
-Text Label 4700 2875 2    39   ~ 0
-MPU9250_INT
 Wire Wire Line
 	6550 2875 6500 2875
 Wire Wire Line
@@ -449,46 +758,14 @@ Wire Wire Line
 	6550 2975 6500 2975
 Wire Wire Line
 	4700 3075 4750 3075
-$Sheet
-S 900  6050 775  900 
-U 55A505C3
-F0 "Sensors" 60
-F1 "sensors.sch" 60
-F2 "I2C2_SDA" I R 1675 6400 39 
-F3 "I2C2_SCL" I R 1675 6450 39 
-F4 "MPU9250_INT" I R 1675 6300 39 
-F5 "MPU9250_SCK" I R 1675 6100 39 
-F6 "MPU9250_MOSI" I R 1675 6150 39 
-F7 "MPU9250_MISO" I R 1675 6200 39 
-F8 "MPU9250_CS" I R 1675 6250 39 
-F9 "GPS_TX" I R 1675 6650 39 
-F10 "GPS_RX" I R 1675 6600 39 
-F11 "Battery" I R 1675 6550 39 
-$EndSheet
-Text Label 1725 6400 0    39   ~ 0
-I2C2_SDA
 Wire Wire Line
 	1725 6400 1675 6400
-Text Label 1725 6450 0    39   ~ 0
-I2C2_SCL
 Wire Wire Line
 	1725 6450 1675 6450
-Text Label 6550 2675 0    39   ~ 0
-DCAN1_RX
-Text Label 6550 2775 0    39   ~ 0
-DCAN1_TX
 Wire Wire Line
 	6550 2775 6500 2775
 Wire Wire Line
 	6500 2675 6550 2675
-Text Label 3975 6100 0    39   ~ 0
-UART5_TX
-Text Label 3975 6150 0    39   ~ 0
-UART5_RX
-Text Label 3975 6200 0    39   ~ 0
-UART5_RTS
-Text Label 3975 6250 0    39   ~ 0
-UART5_CTS
 Wire Wire Line
 	3975 6100 3925 6100
 Wire Wire Line
@@ -497,60 +774,20 @@ Wire Wire Line
 	3975 6200 3925 6200
 Wire Wire Line
 	3925 6250 3975 6250
-Text Label 3975 6300 0    39   ~ 0
-XBEE_DTR
 Wire Wire Line
 	3975 6300 3925 6300
-Text Label 1750 3375 2    39   ~ 0
-UART5_TX
 Wire Wire Line
 	1750 3375 1800 3375
-Text Label 3550 3375 0    39   ~ 0
-UART5_RX
 Wire Wire Line
 	3550 3375 3500 3375
-Text Label 3550 3075 0    39   ~ 0
-UART5_RTS
-Text Label 1750 3075 2    39   ~ 0
-UART5_CTS
 Wire Wire Line
 	3550 3075 3500 3075
 Wire Wire Line
 	1750 3075 1800 3075
-Text Label 3550 2975 0    39   ~ 0
-XBEE_DTR
 Wire Wire Line
 	3550 2975 3500 2975
 Wire Wire Line
 	4700 2875 4750 2875
-Text Notes 1200 4700 0    47   ~ 0
-I2C adresses:\nEEPROM:	0x54 to 0x57\nBarometer:	0x77\n
-Text Label 8475 3550 2    39   ~ 0
-I2C2_SDA
-Text Label 8475 3600 2    39   ~ 0
-I2C2_SCL
-$Comp
-L R_Small R?
-U 1 1 55A80D7C
-P 8575 3400
-F 0 "R?" H 8605 3420 50  0000 L CNN
-F 1 "4.7k" H 8605 3360 50  0000 L CNN
-F 2 "" H 8575 3400 60  0000 C CNN
-F 3 "" H 8575 3400 60  0000 C CNN
-	1    8575 3400
-	1    0    0    -1  
-$EndComp
-$Comp
-L R_Small R?
-U 1 1 55A80E92
-P 8825 3400
-F 0 "R?" H 8855 3420 50  0000 L CNN
-F 1 "4.7k" H 8855 3360 50  0000 L CNN
-F 2 "" H 8825 3400 60  0000 C CNN
-F 3 "" H 8825 3400 60  0000 C CNN
-	1    8825 3400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8475 3550 8575 3550
 Wire Wire Line
@@ -559,72 +796,20 @@ Wire Wire Line
 	8475 3600 8825 3600
 Wire Wire Line
 	8825 3600 8825 3500
-$Comp
-L +3.3V_A #PWR?
-U 1 1 55A80FFB
-P 8575 3250
-F 0 "#PWR?" H 8575 3210 30  0001 C CNN
-F 1 "+3.3V_A" H 8575 3360 30  0000 C CNN
-F 2 "" H 8575 3250 60  0000 C CNN
-F 3 "" H 8575 3250 60  0000 C CNN
-	1    8575 3250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8575 3250 8575 3300
-$Comp
-L +3.3V_A #PWR?
-U 1 1 55A810F5
-P 8825 3250
-F 0 "#PWR?" H 8825 3210 30  0001 C CNN
-F 1 "+3.3V_A" H 8825 3360 30  0000 C CNN
-F 2 "" H 8825 3250 60  0000 C CNN
-F 3 "" H 8825 3250 60  0000 C CNN
-	1    8825 3250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8825 3250 8825 3300
-Text Notes 8200 3050 0    39   ~ 0
-I2C pull-ups\n
-Text Label 6550 2575 0    39   ~ 0
-EHRPWM0A
-Wire Wire Line
-	6550 2575 6500 2575
-Text Label 4700 2575 2    39   ~ 0
-EHRPWM0B
-Wire Wire Line
-	4700 2575 4750 2575
-Text Label 6550 2175 0    39   ~ 0
-EHRPWM1A
-Text Label 6550 2275 0    39   ~ 0
-EHRPWM1B
 Wire Wire Line
 	6550 2275 6500 2275
 Wire Wire Line
 	6500 2175 6550 2175
-Text Label 1750 2475 2    39   ~ 0
-EHRPWM2A
 Wire Wire Line
 	1800 2475 1750 2475
-Text Label 1750 2175 2    39   ~ 0
-EHRPWM2B
 Wire Wire Line
 	1750 2175 1800 2175
-Text Label 3975 6600 0    39   ~ 0
-EHRPWM0A
 Wire Wire Line
 	3975 6600 3925 6600
-Text Label 3975 6650 0    39   ~ 0
-EHRPWM0B
-Text Label 3975 6700 0    39   ~ 0
-EHRPWM1A
-Text Label 3975 6750 0    39   ~ 0
-EHRPWM1B
-Text Label 3975 6800 0    39   ~ 0
-EHRPWM2A
-Text Label 3975 6850 0    39   ~ 0
-EHRPWM2B
 Wire Wire Line
 	3975 6650 3925 6650
 Wire Wire Line
@@ -632,96 +817,25 @@ Wire Wire Line
 Wire Wire Line
 	3975 6750 3925 6750
 Wire Wire Line
-	3925 6800 3975 6800
-Wire Wire Line
-	3975 6850 3925 6850
-Text Label 3975 6400 0    39   ~ 0
-I2C2_SDA
-Wire Wire Line
 	3975 6400 3925 6400
-Text Label 3975 6450 0    39   ~ 0
-I2C2_SCL
 Wire Wire Line
 	3975 6450 3925 6450
-Text Label 3975 6500 0    39   ~ 0
-PWMGEN_OE
 Wire Wire Line
 	3975 6500 3925 6500
-Text Label 4700 2775 2    39   ~ 0
-PWMGEN_OE
 Wire Wire Line
 	4700 2775 4750 2775
-Text Label 3975 7000 0    39   ~ 0
-DCAN1_RX
-Text Label 3975 6950 0    39   ~ 0
-DCAN1_TX
 Wire Wire Line
-	3975 6950 3925 6950
+	3975 6850 3925 6850
 Wire Wire Line
-	3925 7000 3975 7000
-$Comp
-L +5V #PWR?
-U 1 1 55ABC5F4
-P 4175 1775
-F 0 "#PWR?" H 4175 1625 50  0001 C CNN
-F 1 "+5V" H 4175 1915 50  0000 C CNN
-F 2 "" H 4175 1775 60  0000 C CNN
-F 3 "" H 4175 1775 60  0000 C CNN
-	1    4175 1775
-	-1   0    0    -1  
-$EndComp
+	3925 6900 3975 6900
 Wire Wire Line
 	7050 1775 6500 1775
-$Comp
-L +5V #PWR?
-U 1 1 55ABC86A
-P 7050 1775
-F 0 "#PWR?" H 7050 1625 50  0001 C CNN
-F 1 "+5V" H 7050 1915 50  0000 C CNN
-F 2 "" H 7050 1775 60  0000 C CNN
-F 3 "" H 7050 1775 60  0000 C CNN
-	1    7050 1775
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	4175 1775 4750 1775
-$Comp
-L GND #PWR?
-U 1 1 55ABD079
-P 6550 1575
-F 0 "#PWR?" H 6550 1325 50  0001 C CNN
-F 1 "GND" H 6550 1425 50  0000 C CNN
-F 2 "" H 6550 1575 60  0000 C CNN
-F 3 "" H 6550 1575 60  0000 C CNN
-	1    6550 1575
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	6550 1575 6500 1575
-$Comp
-L GND #PWR?
-U 1 1 55ABD1F2
-P 4700 1575
-F 0 "#PWR?" H 4700 1325 50  0001 C CNN
-F 1 "GND" H 4700 1425 50  0000 C CNN
-F 2 "" H 4700 1575 60  0000 C CNN
-F 3 "" H 4700 1575 60  0000 C CNN
-	1    4700 1575
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	4700 1575 4750 1575
-$Comp
-L GND #PWR?
-U 1 1 55ABD7FF
-P 4700 3825
-F 0 "#PWR?" H 4700 3575 50  0001 C CNN
-F 1 "GND" H 4700 3675 50  0000 C CNN
-F 2 "" H 4700 3825 60  0000 C CNN
-F 3 "" H 4700 3825 60  0000 C CNN
-	1    4700 3825
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4700 3675 4700 3825
 Wire Wire Line
@@ -729,17 +843,6 @@ Wire Wire Line
 Wire Wire Line
 	4700 3675 4750 3675
 Connection ~ 4700 3775
-$Comp
-L GND #PWR?
-U 1 1 55ABDB6D
-P 6550 3825
-F 0 "#PWR?" H 6550 3575 50  0001 C CNN
-F 1 "GND" H 6550 3675 50  0000 C CNN
-F 2 "" H 6550 3825 60  0000 C CNN
-F 3 "" H 6550 3825 60  0000 C CNN
-	1    6550 3825
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6550 3675 6550 3825
 Wire Wire Line
@@ -747,88 +850,70 @@ Wire Wire Line
 Wire Wire Line
 	6500 3675 6550 3675
 Connection ~ 6550 3775
-$Comp
-L GND #PWR?
-U 1 1 55ABE52B
-P 3550 1575
-F 0 "#PWR?" H 3550 1325 50  0001 C CNN
-F 1 "GND" H 3550 1425 50  0000 C CNN
-F 2 "" H 3550 1575 60  0000 C CNN
-F 3 "" H 3550 1575 60  0000 C CNN
-	1    3550 1575
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	3550 1575 3500 1575
-$Comp
-L GND #PWR?
-U 1 1 55ABE7A9
-P 1750 1575
-F 0 "#PWR?" H 1750 1325 50  0001 C CNN
-F 1 "GND" H 1750 1425 50  0000 C CNN
-F 2 "" H 1750 1575 60  0000 C CNN
-F 3 "" H 1750 1575 60  0000 C CNN
-	1    1750 1575
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	1800 1575 1750 1575
-$Comp
-L +3V3 #PWR?
-U 1 1 55ABF0F8
-P 6900 1675
-F 0 "#PWR?" H 6900 1525 50  0001 C CNN
-F 1 "+3V3" H 6900 1815 50  0000 C CNN
-F 2 "" H 6900 1675 60  0000 C CNN
-F 3 "" H 6900 1675 60  0000 C CNN
-	1    6900 1675
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6900 1675 6500 1675
-$Comp
-L +3V3 #PWR?
-U 1 1 55ABF4FC
-P 4350 1675
-F 0 "#PWR?" H 4350 1525 50  0001 C CNN
-F 1 "+3V3" H 4350 1815 50  0000 C CNN
-F 2 "" H 4350 1675 60  0000 C CNN
-F 3 "" H 4350 1675 60  0000 C CNN
-	1    4350 1675
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4350 1675 4750 1675
-Text Label 5675 6125 0    39   ~ 0
-3.3V_A_EN
 Wire Wire Line
 	5675 6125 5625 6125
-Text Label 4700 2675 2    39   ~ 0
-3.3V_A_EN
 Wire Wire Line
 	4700 2675 4750 2675
-Text Label 4700 2075 2    39   ~ 0
-UART4_RX
 Wire Wire Line
 	4700 2075 4750 2075
-Text Label 4700 2175 2    39   ~ 0
-UART4_TX
 Wire Wire Line
 	4700 2175 4750 2175
-Text Label 1725 6600 0    39   ~ 0
-UART4_TX
 Wire Wire Line
 	1725 6600 1675 6600
-Text Label 1725 6650 0    39   ~ 0
-UART4_RX
 Wire Wire Line
 	1675 6650 1725 6650
-Text Label 1725 6550 0    39   ~ 0
-Backup_Battery
 Wire Wire Line
 	1725 6550 1675 6550
-Text Label 5675 6225 0    39   ~ 0
-Backup_Battery
 Wire Wire Line
 	5675 6225 5625 6225
+Wire Wire Line
+	4700 2575 4750 2575
+Wire Wire Line
+	6550 2575 6500 2575
+Wire Wire Line
+	3925 7000 3975 7000
+Wire Wire Line
+	3925 7050 3975 7050
+Wire Wire Line
+	6550 3475 6500 3475
+Wire Wire Line
+	4700 3175 4750 3175
+Wire Wire Line
+	4750 3275 4700 3275
+Wire Wire Line
+	4700 3375 4750 3375
+Wire Wire Line
+	4750 3475 4700 3475
+Wire Wire Line
+	6550 3275 6500 3275
+Wire Wire Line
+	6500 3375 6550 3375
+Wire Wire Line
+	7000 3175 6500 3175
+Wire Wire Line
+	6550 3075 6500 3075
+Wire Wire Line
+	3975 7150 3925 7150
+Wire Wire Line
+	3975 7500 3925 7500
+Wire Wire Line
+	3975 7450 3925 7450
+Wire Wire Line
+	3975 7400 3925 7400
+Wire Wire Line
+	3975 7350 3925 7350
+Wire Wire Line
+	3925 7300 3975 7300
+Wire Wire Line
+	3975 7250 3925 7250
+Wire Wire Line
+	3925 7200 3975 7200
 $EndSCHEMATC
