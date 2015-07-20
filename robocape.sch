@@ -117,7 +117,7 @@ F 3 "" H 4900 2025 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 3850 5875 975  1500
+S 3850 5875 975  1700
 U 55A505CD
 F0 "Connectivity" 60
 F1 "connectivity.sch" 60
@@ -145,6 +145,8 @@ F22 "ADC_3" I R 4825 7175 39
 F23 "ADC_4" I R 4825 7225 39 
 F24 "ADC_5" I R 4825 7275 39 
 F25 "ADC_6" I R 4825 7325 39 
+F26 "I2C1_SDA" I R 4825 7425 39 
+F27 "I2C1_SCL" I R 4825 7475 39 
 $EndSheet
 $Sheet
 S 1800 7000 725  250 
@@ -933,10 +935,8 @@ Wire Notes Line
 NoConn ~ 6175 3000
 NoConn ~ 6175 3100
 NoConn ~ 6175 3200
-NoConn ~ 6175 3500
 NoConn ~ 6175 4700
 NoConn ~ 4425 4700
-NoConn ~ 4425 3500
 NoConn ~ 4425 3400
 NoConn ~ 4425 3100
 NoConn ~ 4425 3000
@@ -1165,4 +1165,20 @@ Wire Wire Line
 	3225 3500 3175 3500
 Wire Wire Line
 	1425 3500 1475 3500
+Text Label 4875 7425 0    39   ~ 0
+I2C1_SDA
+Text Label 4875 7475 0    39   ~ 0
+I2C1_SCL
+Wire Wire Line
+	4875 7475 4825 7475
+Wire Wire Line
+	4825 7425 4875 7425
+Text Label 6225 3500 0    39   ~ 0
+I2C1_SDA
+Text Label 4375 3500 2    39   ~ 0
+I2C1_SCL
+Wire Wire Line
+	4375 3500 4425 3500
+Wire Wire Line
+	6225 3500 6175 3500
 $EndSCHEMATC
