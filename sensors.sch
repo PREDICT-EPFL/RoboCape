@@ -61,17 +61,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L MPU-9250 U10
-U 1 1 55A53A6C
-P 3300 2250
-F 0 "U10" H 3700 3050 60  0000 C CNN
-F 1 "MPU-9250" H 3050 3050 60  0000 C CNN
-F 2 "Housings_DFN_QFN:QFN-24-1EP_3x3mm_Pitch0.4mm" H 3300 2850 60  0001 C CNN
-F 3 "" H 3300 2850 60  0000 C CNN
-	1    3300 2250
-	1    0    0    -1  
-$EndComp
 NoConn ~ 2500 2950
 NoConn ~ 2500 2850
 NoConn ~ 2500 2750
@@ -667,4 +656,15 @@ Text HLabel 7675 4750 0    39   Input ~ 0
 Battery
 Wire Wire Line
 	7675 4750 7750 4750
+$Comp
+L MPU-9250 U?
+U 1 1 55B15A2B
+P 3300 2250
+F 0 "U?" H 3700 3050 60  0000 C CNN
+F 1 "MPU-9250" H 3050 3050 60  0000 C CNN
+F 2 "" H 3300 2850 60  0000 C CNN
+F 3 "" H 3300 2850 60  0000 C CNN
+	1    3300 2250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
