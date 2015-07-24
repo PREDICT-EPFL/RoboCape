@@ -11,4 +11,5 @@
   (lib (name cvra)(type Legacy)(uri "$(KIPRJMOD)/kicad-lib/footprints/cvra.mod")(options "")(descr ""))
   (lib (name inductors)(type KiCad)(uri "$(KIPRJMOD)/kicad-lib/footprints/inductors.pretty")(options "")(descr ""))
   (lib (name _beaglebone)(type KiCad)(uri "$(KIPRJMOD)/kicad-lib/footprints/_beaglebone.pretty")(options "")(descr ""))
+  (lib (name _logo)(type KiCad)(uri "$(KIPRJMOD)/kicad-lib/footprints/_logo.pretty")(options "")(descr ""))
 )
