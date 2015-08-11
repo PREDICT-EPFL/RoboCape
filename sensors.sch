@@ -54,10 +54,10 @@ encoding utf-8
 Sheet 4 4
 Title "Robotics Cape"
 Date "2015-07-20"
-Rev "C"
+Rev "3"
 Comp "Automatic Control Laboratory EPFL"
-Comment1 "Designed by: Salah-Eddine Missri"
-Comment2 ""
+Comment1 "Supervised by: Andrea Alessandretti & Prof. Colin Jones"
+Comment2 "Designed by: Salah-Eddine Missri"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -356,7 +356,6 @@ F 3 "" H 4075 5850 60  0000 C CNN
 $EndComp
 NoConn ~ 2575 5900
 NoConn ~ 2575 5700
-NoConn ~ 3875 5250
 NoConn ~ 3875 6050
 $Comp
 L R_Small R17
@@ -453,44 +452,36 @@ Wire Notes Line
 $Comp
 L SMA J1
 U 1 1 55B15BE2
-P 4500 5050
-F 0 "J1" H 4625 5365 60  0000 C CNN
-F 1 "SMA" H 4690 5290 60  0000 C CNN
-F 2 "_connectors:SMA-CONN" H 4500 5500 50  0000 C CNN
-F 3 "" H 4500 5050 60  0000 C CNN
-	1    4500 5050
+P 4900 4700
+F 0 "J1" H 5025 5015 60  0000 C CNN
+F 1 "SMA" H 5090 4940 60  0000 C CNN
+F 2 "_connectors:SMA-CONN" H 4900 5150 50  0000 C CNN
+F 3 "" H 4900 4700 60  0000 C CNN
+	1    4900 4700
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR096
 U 1 1 55B15C94
-P 4475 5000
-F 0 "#PWR096" H 4475 4750 50  0001 C CNN
-F 1 "GND" H 4475 4850 50  0000 C CNN
-F 2 "" H 4475 5000 60  0000 C CNN
-F 3 "" H 4475 5000 60  0000 C CNN
-	1    4475 5000
+P 4875 4725
+F 0 "#PWR096" H 4875 4475 50  0001 C CNN
+F 1 "GND" H 4875 4575 50  0000 C CNN
+F 2 "" H 4875 4725 60  0000 C CNN
+F 3 "" H 4875 4725 60  0000 C CNN
+	1    4875 4725
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4550 4975 4550 4950
+	4875 4700 4875 4725
 Wire Wire Line
-	4475 4975 4475 5000
+	4800 4700 4950 4700
+Connection ~ 4900 4700
+Connection ~ 4875 4700
+Connection ~ 4850 4700
 Wire Wire Line
-	4400 4975 4550 4975
+	4750 4400 4125 4400
 Wire Wire Line
-	4500 4950 4500 4975
-Connection ~ 4500 4975
-Wire Wire Line
-	4450 4950 4450 4975
-Connection ~ 4475 4975
-Wire Wire Line
-	4400 4975 4400 4950
-Connection ~ 4450 4975
-Wire Wire Line
-	4350 4750 4125 4750
-Wire Wire Line
-	4125 4750 4125 5050
+	4125 4400 4125 5050
 Wire Wire Line
 	4125 5050 3875 5050
 $Comp
@@ -667,4 +658,70 @@ F 3 "" H 3300 2850 60  0000 C CNN
 	1    3300 2250
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4800 4700 4800 4600
+Wire Wire Line
+	4850 4600 4850 4700
+Wire Wire Line
+	4900 4600 4900 4700
+Wire Wire Line
+	4950 4700 4950 4600
+$Comp
+L L_Small L2
+U 1 1 55CA6075
+P 4375 4950
+F 0 "L2" H 4405 4990 50  0000 L CNN
+F 1 "L" H 4405 4910 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 4375 4950 60  0001 C CNN
+F 3 "" H 4375 4950 60  0000 C CNN
+	1    4375 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R40
+U 1 1 55CA61C2
+P 4075 5250
+F 0 "R40" V 4025 5325 50  0000 L CNN
+F 1 "10" V 4075 5250 39  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 4075 5250 60  0001 C CNN
+F 3 "" H 4075 5250 60  0000 C CNN
+	1    4075 5250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3875 5250 3975 5250
+Wire Wire Line
+	4175 5250 4825 5250
+Wire Wire Line
+	4375 5250 4375 5050
+Wire Wire Line
+	4375 4850 4375 4400
+Connection ~ 4375 4400
+$Comp
+L C_Small C26
+U 1 1 55CA656B
+P 4825 5400
+F 0 "C26" H 4835 5470 50  0000 L CNN
+F 1 "C" H 4835 5320 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 4825 5400 60  0001 C CNN
+F 3 "" H 4825 5400 60  0000 C CNN
+	1    4825 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4825 5250 4825 5300
+Connection ~ 4375 5250
+$Comp
+L GND #PWR0100
+U 1 1 55CA673B
+P 4825 5550
+F 0 "#PWR0100" H 4825 5300 50  0001 C CNN
+F 1 "GND" H 4825 5400 50  0000 C CNN
+F 2 "" H 4825 5550 60  0000 C CNN
+F 3 "" H 4825 5550 60  0000 C CNN
+	1    4825 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4825 5550 4825 5500
 $EndSCHEMATC

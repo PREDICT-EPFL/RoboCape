@@ -54,10 +54,10 @@ encoding utf-8
 Sheet 1 4
 Title "Robotics Cape"
 Date "2015-07-20"
-Rev "C"
+Rev "3"
 Comp "Automatic Control Laboratory EPFL"
-Comment1 "Designed by: Salah-Eddine Missri"
-Comment2 ""
+Comment1 "Supervised by: Andrea Alessandretti & Prof. Colin Jones"
+Comment2 "Designed by: Salah-Eddine Missri"
 Comment3 ""
 Comment4 ""
 $EndDescr
