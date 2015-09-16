@@ -8,3 +8,10 @@ The repository contains all the design files of the Beaglebone cape extension.
 * PCB layout
 * Production files
 * Documentation files (useful documents and datasheets)
+
+
+## License
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+
+This project is released under the Creative Commons CC-BY-4.0 license.
+See http://creativecommons.org/licenses/by/4.0/ for details.
