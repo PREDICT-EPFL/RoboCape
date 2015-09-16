@@ -1,0 +1,809 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:phoenix
+LIBS:cvra
+LIBS:_wireless
+LIBS:_stm32
+LIBS:_sensors
+LIBS:_power
+LIBS:_motor_drivers
+LIBS:_linear-regulators
+LIBS:_ic
+LIBS:_div
+LIBS:_connectors
+LIBS:_charge-pump-regulators
+LIBS:_audio
+LIBS:_antenna
+LIBS:National
+LIBS:Mec
+LIBS:IRF
+LIBS:Comp2014
+LIBS:robocape-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title "Robotics Cape"
+Date "2015-07-20"
+Rev "3"
+Comp "Automatic Control Laboratory EPFL"
+Comment1 "Supervised by: Andrea Alessandretti & Prof. Colin Jones"
+Comment2 "Designed by: Salah-Eddine Missri"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L PWR CONN16
+U 1 1 55AAEB82
+P 1500 1650
+F 0 "CONN16" H 1450 1850 50  0000 C CNN
+F 1 "PWR" H 1450 1450 50  0000 C CNN
+F 2 "_connectors:_Pin2mm_2" H 1750 1650 50  0001 C CNN
+F 3 "DOCUMENTATION" H 1750 1650 50  0001 C CNN
+	1    1500 1650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR064
+U 1 1 55AAF05B
+P 1900 2150
+F 0 "#PWR064" H 1900 1900 50  0001 C CNN
+F 1 "GND" H 1900 2000 50  0000 C CNN
+F 2 "" H 1900 2150 60  0000 C CNN
+F 3 "" H 1900 2150 60  0000 C CNN
+	1    1900 2150
+	1    0    0    -1  
+$EndComp
+Text GLabel 2750 1600 2    39   Input ~ 0
+POWER
+Text GLabel 1800 4075 0    39   Input ~ 0
+POWER
+$Comp
+L C_Small C7
+U 1 1 55AAFA7E
+P 1925 4225
+F 0 "C7" H 1935 4295 50  0000 L CNN
+F 1 "10u" H 1935 4145 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 1925 4225 60  0001 C CNN
+F 3 "" H 1925 4225 60  0000 C CNN
+	1    1925 4225
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C8
+U 1 1 55AAFAC6
+P 2100 4225
+F 0 "C8" H 2110 4295 50  0000 L CNN
+F 1 "10u" H 2110 4145 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 2100 4225 60  0001 C CNN
+F 3 "" H 2100 4225 60  0000 C CNN
+	1    2100 4225
+	1    0    0    -1  
+$EndComp
+$Comp
+L INDUCTOR_SMALL L1
+U 1 1 55AAFC8C
+P 3100 3525
+F 0 "L1" H 3100 3625 50  0000 C CNN
+F 1 "1uH" H 3100 3475 50  0000 C CNN
+F 2 "inductors:Laird_TYS6045" H 3100 3525 60  0001 C CNN
+F 3 "" H 3100 3525 60  0000 C CNN
+	1    3100 3525
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C9
+U 1 1 55AAFD37
+P 2275 4525
+F 0 "C9" H 2285 4595 50  0000 L CNN
+F 1 "100n" H 2285 4445 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 2275 4525 60  0001 C CNN
+F 3 "" H 2275 4525 60  0000 C CNN
+	1    2275 4525
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR065
+U 1 1 55AAFDC8
+P 1925 4825
+F 0 "#PWR065" H 1925 4575 50  0001 C CNN
+F 1 "GND" H 1925 4675 50  0000 C CNN
+F 2 "" H 1925 4825 60  0000 C CNN
+F 3 "" H 1925 4825 60  0000 C CNN
+	1    1925 4825
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR066
+U 1 1 55AAFDF8
+P 3700 4825
+F 0 "#PWR066" H 3700 4575 50  0001 C CNN
+F 1 "GND" H 3700 4675 50  0000 C CNN
+F 2 "" H 3700 4825 60  0000 C CNN
+F 3 "" H 3700 4825 60  0000 C CNN
+	1    3700 4825
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR067
+U 1 1 55AAFF48
+P 6800 4775
+F 0 "#PWR067" H 6800 4525 50  0001 C CNN
+F 1 "GND" H 6800 4625 50  0000 C CNN
+F 2 "" H 6800 4775 60  0000 C CNN
+F 3 "" H 6800 4775 60  0000 C CNN
+	1    6800 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L TPS63060 U7
+U 1 1 55AB00ED
+P 3100 3925
+F 0 "U7" H 3400 2925 60  0000 C CNN
+F 1 "TPS63060" H 3100 4125 60  0000 C CNN
+F 2 "_std:WSON10" H 3100 3925 60  0001 C CNN
+F 3 "" H 3100 3925 60  0000 C CNN
+	1    3100 3925
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R13
+U 1 1 55AB0376
+P 4175 4175
+F 0 "R13" H 4205 4195 50  0000 L CNN
+F 1 "1M" H 4205 4135 50  0000 L CNN
+F 2 "Resistors_SMD:R_0402" H 4175 4175 60  0001 C CNN
+F 3 "" H 4175 4175 60  0000 C CNN
+	1    4175 4175
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR068
+U 1 1 55AB054E
+P 5100 4025
+F 0 "#PWR068" H 5100 3875 50  0001 C CNN
+F 1 "+5V" H 5100 4165 50  0000 C CNN
+F 2 "" H 5100 4025 60  0000 C CNN
+F 3 "" H 5100 4025 60  0000 C CNN
+	1    5100 4025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2150 1900 1700
+Wire Wire Line
+	1900 1700 1850 1700
+Wire Wire Line
+	1850 1600 1950 1600
+Wire Wire Line
+	3650 4075 5100 4075
+Connection ~ 4175 4075
+Wire Wire Line
+	3650 3875 3650 3525
+Wire Wire Line
+	3650 3525 3350 3525
+Wire Wire Line
+	2850 3525 2550 3525
+Wire Wire Line
+	2550 3525 2550 3875
+Wire Wire Line
+	2500 4775 2500 4575
+Wire Wire Line
+	1925 4775 2550 4775
+Wire Wire Line
+	2500 4575 2550 4575
+Connection ~ 2500 4775
+Wire Wire Line
+	2275 4775 2275 4625
+Wire Wire Line
+	2275 4425 2275 4375
+Wire Wire Line
+	2275 4375 2550 4375
+Wire Wire Line
+	1800 4075 2550 4075
+Wire Wire Line
+	2100 4075 2100 4125
+Wire Wire Line
+	1925 4075 1925 4125
+Connection ~ 2100 4075
+Connection ~ 1925 4075
+Wire Wire Line
+	1925 4325 1925 4825
+Connection ~ 1925 4775
+Wire Wire Line
+	2100 4775 2100 4325
+Connection ~ 2100 4775
+Connection ~ 2275 4775
+Wire Wire Line
+	3650 4775 3700 4775
+Wire Wire Line
+	3700 4775 3700 4825
+Wire Wire Line
+	3650 4275 4475 4275
+Connection ~ 4175 4275
+$Comp
+L R_Small R14
+U 1 1 55AB0C1B
+P 4175 4375
+F 0 "R14" H 4205 4395 50  0000 L CNN
+F 1 "111k" H 4205 4335 50  0000 L CNN
+F 2 "Resistors_SMD:R_0402" H 4175 4375 60  0001 C CNN
+F 3 "" H 4175 4375 60  0000 C CNN
+	1    4175 4375
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C10
+U 1 1 55AB0CEB
+P 4475 4375
+F 0 "C10" H 4485 4445 50  0000 L CNN
+F 1 "10p" H 4485 4295 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 4475 4375 60  0001 C CNN
+F 3 "" H 4475 4375 60  0000 C CNN
+	1    4475 4375
+	1    0    0    -1  
+$EndComp
+Text Label 3700 4575 0    39   ~ 0
+PWR_GOOD
+Wire Wire Line
+	3700 4575 3650 4575
+Wire Wire Line
+	4475 4475 4475 4500
+$Comp
+L R_Small R16
+U 1 1 55AB119A
+P 6800 4625
+F 0 "R16" H 6830 4645 50  0000 L CNN
+F 1 "1k" H 6830 4585 50  0000 L CNN
+F 2 "Resistors_SMD:R_0402" H 6800 4625 60  0001 C CNN
+F 3 "" H 6800 4625 60  0000 C CNN
+	1    6800 4625
+	1    0    0    -1  
+$EndComp
+$Comp
+L Led_Small D1
+U 1 1 55AB12B0
+P 6800 3925
+F 0 "D1" V 6725 3950 50  0000 L CNN
+F 1 "YELLOW" V 6725 3725 50  0000 C CNN
+F 2 "LEDs:LED-0603" V 6800 3925 60  0001 C CNN
+F 3 "" V 6800 3925 60  0000 C CNN
+	1    6800 3925
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6800 4475 6800 4525
+Wire Wire Line
+	6800 4725 6800 4775
+Text Label 6350 4275 2    39   ~ 0
+PWR_GOOD
+$Comp
+L Q_NMOS_DGS Q1
+U 1 1 55AB1600
+P 6700 4275
+F 0 "Q1" H 7000 4325 50  0000 R CNN
+F 1 "2N7002" H 7175 4225 50  0000 R CNN
+F 2 "_std:_SOT23-3" H 6900 4375 29  0001 C CNN
+F 3 "" H 6700 4275 60  0000 C CNN
+	1    6700 4275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 4025 6800 4075
+Wire Wire Line
+	6350 4275 6500 4275
+$Comp
+L R_Small R15
+U 1 1 55AB1778
+P 6450 3950
+F 0 "R15" H 6480 3970 50  0000 L CNN
+F 1 "1M" H 6480 3910 50  0000 L CNN
+F 2 "Resistors_SMD:R_0402" H 6450 3950 60  0001 C CNN
+F 3 "" H 6450 3950 60  0000 C CNN
+	1    6450 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 4050 6450 4275
+Connection ~ 6450 4275
+$Comp
+L +5V #PWR069
+U 1 1 55AB18CE
+P 6800 3775
+F 0 "#PWR069" H 6800 3625 50  0001 C CNN
+F 1 "+5V" H 6800 3915 50  0000 C CNN
+F 2 "" H 6800 3775 60  0000 C CNN
+F 3 "" H 6800 3775 60  0000 C CNN
+	1    6800 3775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 3775 6800 3825
+Wire Wire Line
+	6800 3800 6450 3800
+Wire Wire Line
+	6450 3800 6450 3850
+Connection ~ 6800 3800
+Text Notes 6050 4700 0    39   ~ 0
+PWR_GOOD is\n1 if good (LED ON)\n0 if failure (LED OFF)
+Text Notes 3900 4025 0    39   ~ 0
+If using TPS63061:\nReplace 1M by 0R\nand DNP 111k/10p
+$Comp
+L C_Small C11
+U 1 1 55AB23DD
+P 4750 4250
+F 0 "C11" H 4760 4320 50  0000 L CNN
+F 1 "22u" H 4760 4170 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 4750 4250 60  0001 C CNN
+F 3 "" H 4750 4250 60  0000 C CNN
+	1    4750 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C12
+U 1 1 55AB24A1
+P 4925 4250
+F 0 "C12" H 4935 4320 50  0000 L CNN
+F 1 "22u" H 4935 4170 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 4925 4250 60  0001 C CNN
+F 3 "" H 4925 4250 60  0000 C CNN
+	1    4925 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C13
+U 1 1 55AB24F0
+P 5100 4250
+F 0 "C13" H 5110 4320 50  0000 L CNN
+F 1 "22u" H 5110 4170 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 5100 4250 60  0001 C CNN
+F 3 "" H 5100 4250 60  0000 C CNN
+	1    5100 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 4025 5100 4150
+Connection ~ 5100 4075
+Wire Wire Line
+	4925 4150 4925 4075
+Connection ~ 4925 4075
+Wire Wire Line
+	4750 4075 4750 4150
+Connection ~ 4750 4075
+$Comp
+L GND #PWR070
+U 1 1 55AB26D6
+P 5100 4525
+F 0 "#PWR070" H 5100 4275 50  0001 C CNN
+F 1 "GND" H 5100 4375 50  0000 C CNN
+F 2 "" H 5100 4525 60  0000 C CNN
+F 3 "" H 5100 4525 60  0000 C CNN
+	1    5100 4525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4175 4500 5100 4500
+Wire Wire Line
+	5100 4350 5100 4525
+Connection ~ 5100 4500
+Wire Wire Line
+	4925 4350 4925 4500
+Connection ~ 4925 4500
+Wire Wire Line
+	4750 4350 4750 4500
+Connection ~ 4750 4500
+Wire Wire Line
+	4175 4475 4175 4500
+Connection ~ 4475 4500
+Text Notes 5275 4075 0    39   ~ 0
+5V, 800mA output\nCan go up to 2A
+Wire Wire Line
+	2550 4175 2500 4175
+Wire Wire Line
+	2500 4175 2500 4075
+Connection ~ 2500 4075
+$Comp
+L TPS22929D U8
+U 1 1 55AC0F91
+P 9225 1700
+F 0 "U8" H 9425 1250 60  0000 C CNN
+F 1 "TPS22929D" H 9225 2050 60  0000 C CNN
+F 2 "_std:_TSOT23-6" H 8625 2000 60  0001 C CNN
+F 3 "" H 8625 2000 60  0000 C CNN
+	1    9225 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR071
+U 1 1 55AC1039
+P 8150 1700
+F 0 "#PWR071" H 8150 1550 50  0001 C CNN
+F 1 "+3V3" H 8150 1840 50  0000 C CNN
+F 2 "" H 8150 1700 60  0000 C CNN
+F 3 "" H 8150 1700 60  0000 C CNN
+	1    8150 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C14
+U 1 1 55AC1091
+P 8575 1850
+F 0 "C14" H 8585 1920 50  0000 L CNN
+F 1 "1u" H 8585 1770 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 8575 1850 60  0001 C CNN
+F 3 "" H 8575 1850 60  0000 C CNN
+	1    8575 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8575 1950 8575 2025
+Wire Wire Line
+	8575 2000 8775 2000
+Wire Wire Line
+	8775 1800 8725 1800
+Wire Wire Line
+	8725 1800 8725 1700
+Wire Wire Line
+	8450 1700 8775 1700
+Connection ~ 8725 1700
+Wire Wire Line
+	8575 1700 8575 1750
+Connection ~ 8575 1700
+$Comp
+L GND #PWR072
+U 1 1 55AC12A8
+P 8575 2025
+F 0 "#PWR072" H 8575 1775 50  0001 C CNN
+F 1 "GND" H 8575 1875 50  0000 C CNN
+F 2 "" H 8575 2025 60  0000 C CNN
+F 3 "" H 8575 2025 60  0000 C CNN
+	1    8575 2025
+	1    0    0    -1  
+$EndComp
+Connection ~ 8575 2000
+$Comp
+L GND #PWR073
+U 1 1 55AC13C7
+P 9725 2025
+F 0 "#PWR073" H 9725 1775 50  0001 C CNN
+F 1 "GND" H 9725 1875 50  0000 C CNN
+F 2 "" H 9725 2025 60  0000 C CNN
+F 3 "" H 9725 2025 60  0000 C CNN
+	1    9725 2025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9725 1950 9725 2025
+Wire Wire Line
+	9725 2000 9675 2000
+$Comp
+L C_Small C15
+U 1 1 55AC1461
+P 9725 1850
+F 0 "C15" H 9735 1920 50  0000 L CNN
+F 1 "1u" H 9735 1770 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 9725 1850 60  0001 C CNN
+F 3 "" H 9725 1850 60  0000 C CNN
+	1    9725 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9725 1650 9725 1750
+Wire Wire Line
+	9725 1700 9675 1700
+Connection ~ 9725 2000
+$Comp
+L +3.3V_A #PWR074
+U 1 1 55AC15A6
+P 9725 1650
+F 0 "#PWR074" H 9725 1610 30  0001 C CNN
+F 1 "+3.3V_A" H 9725 1760 30  0000 C CNN
+F 2 "" H 9725 1650 60  0000 C CNN
+F 3 "" H 9725 1650 60  0000 C CNN
+	1    9725 1650
+	1    0    0    -1  
+$EndComp
+Connection ~ 9725 1700
+Text HLabel 8750 1500 0    39   Input ~ 0
+3.3V_A_EN
+Wire Wire Line
+	8750 1500 8775 1500
+$Comp
+L F_Small F1
+U 1 1 55AC3A0C
+P 8350 1700
+F 0 "F1" H 8310 1760 50  0000 L CNN
+F 1 "500mA" H 8230 1640 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 8350 1700 60  0001 C CNN
+F 3 "" H 8350 1700 60  0000 C CNN
+	1    8350 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 1700 8150 1700
+$Comp
+L Battery BT1
+U 1 1 55ACA8E0
+P 5350 1700
+F 0 "BT1" H 5450 1750 50  0000 L CNN
+F 1 "1.4V to 3.6V" H 5450 1650 50  0000 L CNN
+F 2 "_connectors:BK-885" V 5350 1740 60  0001 C CNN
+F 3 "" V 5350 1740 60  0000 C CNN
+	1    5350 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR075
+U 1 1 55ACA99A
+P 5350 1900
+F 0 "#PWR075" H 5350 1650 50  0001 C CNN
+F 1 "GND" H 5350 1750 50  0000 C CNN
+F 2 "" H 5350 1900 60  0000 C CNN
+F 3 "" H 5350 1900 60  0000 C CNN
+	1    5350 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 1900 5350 1850
+Text HLabel 5450 1425 2    39   Input ~ 0
+Back_Bat
+Wire Wire Line
+	5350 1425 5350 1550
+Wire Wire Line
+	5450 1425 5350 1425
+Text Notes 4475 875  0    59   ~ 0
+Backup battery for RTC
+Text Notes 800  3075 0    59   ~ 0
+Power supply: 5V output
+Text Notes 775  975  0    59   ~ 0
+Battery connector\n3V to 12V
+Text Notes 7050 850  0    59   ~ 0
+Load switch on i2c modules power
+Wire Notes Line
+	475  2700 11225 2700
+Wire Notes Line
+	6825 2700 6825 475 
+Wire Notes Line
+	4325 2700 4325 475 
+$Comp
+L PWR_FLAG #FLG076
+U 1 1 55B1438E
+P 1625 6900
+F 0 "#FLG076" H 1625 6995 50  0001 C CNN
+F 1 "PWR_FLAG" H 1625 7080 50  0000 C CNN
+F 2 "" H 1625 6900 60  0000 C CNN
+F 3 "" H 1625 6900 60  0000 C CNN
+	1    1625 6900
+	-1   0    0    1   
+$EndComp
+$Comp
+L +3V3 #PWR077
+U 1 1 55B143F6
+P 1625 6800
+F 0 "#PWR077" H 1625 6650 50  0001 C CNN
+F 1 "+3V3" H 1625 6940 50  0000 C CNN
+F 2 "" H 1625 6800 60  0000 C CNN
+F 3 "" H 1625 6800 60  0000 C CNN
+	1    1625 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1625 6800 1625 6900
+$Comp
+L +3.3V_A #PWR078
+U 1 1 55B144F4
+P 2150 6800
+F 0 "#PWR078" H 2150 6760 30  0001 C CNN
+F 1 "+3.3V_A" H 2150 6910 30  0000 C CNN
+F 2 "" H 2150 6800 60  0000 C CNN
+F 3 "" H 2150 6800 60  0000 C CNN
+	1    2150 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG079
+U 1 1 55B1455A
+P 2150 6900
+F 0 "#FLG079" H 2150 6995 50  0001 C CNN
+F 1 "PWR_FLAG" H 2150 7080 50  0000 C CNN
+F 2 "" H 2150 6900 60  0000 C CNN
+F 3 "" H 2150 6900 60  0000 C CNN
+	1    2150 6900
+	-1   0    0    1   
+$EndComp
+$Comp
+L PWR_FLAG #FLG080
+U 1 1 55B145A4
+P 1125 6900
+F 0 "#FLG080" H 1125 6995 50  0001 C CNN
+F 1 "PWR_FLAG" H 1125 7080 50  0000 C CNN
+F 2 "" H 1125 6900 60  0000 C CNN
+F 3 "" H 1125 6900 60  0000 C CNN
+	1    1125 6900
+	-1   0    0    1   
+$EndComp
+$Comp
+L +5V #PWR081
+U 1 1 55B145DB
+P 1125 6800
+F 0 "#PWR081" H 1125 6650 50  0001 C CNN
+F 1 "+5V" H 1125 6940 50  0000 C CNN
+F 2 "" H 1125 6800 60  0000 C CNN
+F 3 "" H 1125 6800 60  0000 C CNN
+	1    1125 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1125 6800 1125 6900
+Wire Wire Line
+	2150 6800 2150 6900
+$Comp
+L PWR_FLAG #FLG082
+U 1 1 55B14718
+P 2650 6800
+F 0 "#FLG082" H 2650 6895 50  0001 C CNN
+F 1 "PWR_FLAG" H 2650 6980 50  0000 C CNN
+F 2 "" H 2650 6800 60  0000 C CNN
+F 3 "" H 2650 6800 60  0000 C CNN
+	1    2650 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR083
+U 1 1 55B1474F
+P 2650 6900
+F 0 "#PWR083" H 2650 6650 50  0001 C CNN
+F 1 "GND" H 2650 6750 50  0000 C CNN
+F 2 "" H 2650 6900 60  0000 C CNN
+F 3 "" H 2650 6900 60  0000 C CNN
+	1    2650 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 6900 2650 6800
+Text Notes 650  6100 0    59   ~ 0
+For KiCad DRC checks
+Wire Notes Line
+	475  5750 3575 5750
+Wire Notes Line
+	3575 5750 3575 7800
+Text Notes 8100 3150 0    59   ~ 0
+Battery power voltage sense
+Wire Notes Line
+	7775 2700 7775 6525
+Text HLabel 9900 4050 2    39   Input ~ 0
+PWR_VOLTAGE_SENSE
+Text GLabel 9125 3650 0    39   Input ~ 0
+POWER
+$Comp
+L R_Small R37
+U 1 1 55B3D124
+P 9225 3850
+F 0 "R37" H 9255 3870 50  0000 L CNN
+F 1 "4.7k" H 9255 3810 50  0000 L CNN
+F 2 "Resistors_SMD:R_0402" H 9225 3850 60  0001 C CNN
+F 3 "" H 9225 3850 60  0000 C CNN
+	1    9225 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R38
+U 1 1 55B3D197
+P 9225 4250
+F 0 "R38" H 9255 4270 50  0000 L CNN
+F 1 "820" H 9255 4210 50  0000 L CNN
+F 2 "Resistors_SMD:R_0402" H 9225 4250 60  0001 C CNN
+F 3 "" H 9225 4250 60  0000 C CNN
+	1    9225 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C22
+U 1 1 55B3D21B
+P 9550 4250
+F 0 "C22" H 9560 4320 50  0000 L CNN
+F 1 "100n" H 9560 4170 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 9550 4250 60  0001 C CNN
+F 3 "" H 9550 4250 60  0000 C CNN
+	1    9550 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR084
+U 1 1 55B3D2C4
+P 9225 4450
+F 0 "#PWR084" H 9225 4200 50  0001 C CNN
+F 1 "GND" H 9225 4300 50  0000 C CNN
+F 2 "" H 9225 4450 60  0000 C CNN
+F 3 "" H 9225 4450 60  0000 C CNN
+	1    9225 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9225 4050 9900 4050
+Wire Wire Line
+	9225 3950 9225 4150
+Connection ~ 9225 4050
+Wire Wire Line
+	9550 4150 9550 4050
+Connection ~ 9550 4050
+Wire Wire Line
+	9225 4350 9225 4450
+Wire Wire Line
+	9550 4350 9550 4400
+Wire Wire Line
+	9550 4400 9225 4400
+Connection ~ 9225 4400
+Wire Wire Line
+	9125 3650 9225 3650
+Wire Wire Line
+	9225 3650 9225 3750
+Text Notes 9650 3775 0    39   ~ 0
+Use 0.1% resistor for \nprecise voltage reading
+Text Notes 8100 4250 0    47   ~ 0
+Full range:\n3V to 12V power input\n0.45 to 1.78 output\n\n
+$Comp
+L FUSE F2
+U 1 1 55B4BB3E
+P 2200 1600
+F 0 "F2" H 2300 1650 50  0000 C CNN
+F 1 "10A" H 2100 1550 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" H 2200 1600 60  0001 C CNN
+F 3 "" H 2200 1600 60  0000 C CNN
+	1    2200 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ZENER D6
+U 1 1 55B4BCD5
+P 2600 1850
+F 0 "D6" H 2600 1950 50  0000 C CNN
+F 1 "ZENER 12V" H 2600 1750 50  0000 C CNN
+F 2 "Diodes_SMD:Diode-SMA_Standard" H 2600 1850 60  0001 C CNN
+F 3 "" H 2600 1850 60  0000 C CNN
+	1    2600 1850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2450 1600 2750 1600
+Wire Wire Line
+	2600 1600 2600 1650
+Wire Wire Line
+	2600 2050 2600 2100
+Wire Wire Line
+	2600 2100 1900 2100
+Connection ~ 1900 2100
+Connection ~ 2600 1600
+Text Notes 2850 2200 0    39   ~ 0
+Zener diode acts as overvoltage \nprotection. \nWhen input voltage exceeds 12V,\nthe zener diode short circuits the \nbattery to the ground  and the fuse \nshould blow.\n\nIf you don't want this, don't place the diode.
+Text Notes 1750 1350 0    39   ~ 0
+Choose the fuse depending on the type of battery \nyou're using (check the maximum current it can \noutput) so the fuse blows before the battery.
+$EndSCHEMATC
